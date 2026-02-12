@@ -1,0 +1,268 @@
+/* Responsive design styles */
+/* Tablet: 768px - 1023px */
+@media (min-width: 768px) and (max-width: 1023px) {
+  :root {
+    --font-base: 17px;
+    --font-lg: 20px;
+    --font-xl: 28px;
+    --font-2xl: 40px;
+    --font-3xl: 56px;
+    --font-4xl: 72px;
+    --font-5xl: 96px;
+  }
+  
+  .container {
+    max-width: 720px;
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  
+  .hero-title {
+    font-size: var(--font-5xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-xl);
+  }
+  
+  .section-title {
+    font-size: var(--font-3xl);
+  }
+  
+  .nav-left, .nav-right {
+    gap: 20px;
+  }
+  
+  .nav-item {
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+}
+
+/* Desktop: 1024px - 1439px */
+@media (min-width: 1024px) and (max-width: 1439px) {
+  :root {
+    --font-base: 18px;
+    --font-lg: 22px;
+    --font-xl: 32px;
+    --font-2xl: 48px;
+    --font-3xl: 64px;
+    --font-4xl: 80px;
+    --font-5xl: 110px;
+  }
+  
+  .container {
+    max-width: 1024px;
+  }
+  
+  .grid-3 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  
+  .hero-title {
+    font-size: var(--font-6xl);
+  }
+  
+  .section-title {
+    font-size: var(--font-4xl);
+  }
+  
+  .nav-left, .nav-right {
+    gap: 30px;
+  }
+}
+
+/* Large Desktop: 1440px+ */
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+  }
+  
+  .grid-4 {
+    grid-template-columns: repeat(4, 1fr);
+  }
+  
+  .hero-title {
+    font-size: calc(var(--font-6xl) * 1.2);
+  }
+}
+
+/* Mobile: 320px - 767px */
+@media (max-width: 767px) {
+  :root {
+    --font-base: 15px;
+    --font-lg: 18px;
+    --font-xl: 22px;
+    --font-2xl: 28px;
+    --font-3xl: 36px;
+    --font-4xl: 44px;
+    --font-5xl: 56px;
+  }
+  
+  .container {
+    padding: 0 16px;
+  }
+  
+  .grid-2, .grid-3, .grid-4 {
+    grid-template-columns: 1fr;
+  }
+  
+  .hero {
+    min-height: 500px;
+  }
+  
+  .hero-content {
+    margin-bottom: 80px;
+  }
+  
+  .hero-title {
+    font-size: var(--font-4xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-lg);
+  }
+  
+  .section-title {
+    font-size: var(--font-2xl);
+    margin-bottom: 2rem;
+  }
+  
+  .section-title::after {
+    bottom: -12px;
+    width: 60px;
+  }
+  
+  .collections-grid, .products-grid {
+    gap: 24px;
+  }
+  
+  .collection-card, .product-card {
+    max-width: 400px;
+    margin: 0 auto;
+  }
+  
+  .craftsmanship-content {
+    grid-template-columns: 1fr;
+  }
+  
+  .craftsmanship-text {
+    padding-right: 0;
+    margin-bottom: 2rem;
+  }
+  
+  .testimonials-grid {
+    gap: 20px;
+  }
+  
+  .newsletter-form {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .newsletter-form input {
+    width: 100%;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Small Mobile: 320px - 479px */
+@media (max-width: 479px) {
+  :root {
+    --font-base: 14px;
+    --font-lg: 16px;
+    --font-xl: 20px;
+    --font-2xl: 24px;
+    --font-3xl: 28px;
+    --font-4xl: 32px;
+    --font-5xl: 40px;
+  }
+  
+  .hero-title {
+    font-size: var(--font-3xl);
+  }
+  
+  .hero-subtitle {
+    font-size: var(--font-base);
+  }
+  
+  .section-title {
+    font-size: var(--font-xl);
+  }
+  
+  .btn-primary, .btn-secondary {
+    padding: 14px 24px;
+    font-size: 12px;
+    letter-spacing: 1px;
+  }
+  
+  .nav-container {
+    padding: 0 12px;
+  }
+  
+  .nav-item {
+    font-size: 11px;
+    gap: 20px;
+  }
+  
+  .footer-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .footer-bottom {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .footer-legal {
+    justify-content: center;
+  }
+}
+
+/* Extra Small Mobile: 320px - 359px */
+@media (max-width: 359px) {
+  :root {
+    --font-base: 13px;
+    --font-lg: 15px;
+    --font-xl: 18px;
+    --font-2xl: 22px;
+    --font-3xl: 24px;
+    --font-4xl: 26px;
+    --font-5xl: 32px;
+  }
+  
+  .container {
+    padding: 0 12px;
+  }
+  
+  .hero-title {
+    font-size: var(--font-2xl);
+  }
+  
+  .section-title {
+    font-size: var(--font-lg);
+  }
+  
+  .section-title::after {
+    bottom: -10px;
+    width: 40px;
+  }
+  
+  .collection-info h3 {
+    font-size: var(--font-lg);
+  }
+  
+  .product-name {
+    font-size: 18px;
+  }
+}
