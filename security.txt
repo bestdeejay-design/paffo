@@ -1,0 +1,14 @@
+# Our security address
+Contact: mailto:security@paffo.com
+
+# Our security policy
+Policy: https://paffo.com/security-policy
+
+# How to submit a vulnerability report
+Acknowledgments: https://paffo.com/hall-of-fame
+
+# Expires
+Expires: 2026-12-31T23:59:59.000Z
+
+# Preferred languages for communication
+Preferred-Languages: en, ru
