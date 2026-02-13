@@ -6,12 +6,41 @@
     <title>PAFFO | Luxury Outerwear & Accessories</title>
     <meta name="description" content="Premium luxury outerwear and accessories crafted with passion. Discover our exclusive collections of coats, scarves, gloves and more.">
     
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://paffo.com">
+    
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="PAFFO | Luxury Outerwear & Accessories">
     <meta property="og:description" content="Premium luxury outerwear and accessories crafted with passion.">
     <meta property="og:image" content="/img/og-image.jpg">
     <meta property="og:url" content="https://paffo.com">
+    <meta property="og:type" content="website">
     <meta name="twitter:card" content="summary_large_image">
+    
+    <!-- Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "PAFFO",
+      "description": "Premium luxury outerwear and accessories crafted with passion.",
+      "url": "https://paffo.com",
+      "logo": "/img/logo.png",
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+1-555-123-4567",
+        "contactType": "customer service",
+        "areaServed": "US",
+        "availableLanguage": "en"
+      },
+      "sameAs": [
+        "https://www.instagram.com/paffo",
+        "https://www.pinterest.com/paffo",
+        "https://www.tiktok.com/@paffo",
+        "https://www.youtube.com/paffo"
+      ]
+    }
+    </script>
     
     <!-- Favicon -->
     <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
@@ -33,16 +62,19 @@
     <link rel="stylesheet" href="/css/responsive.css">
 </head>
 <body>
+    <!-- Skip link for accessibility -->
+    <a href="#main-content" class="skip-link">Skip to main content</a>
+    
     <!-- Navigation -->
-    <nav class="navbar">
+    <nav class="navbar" aria-label="Main navigation">
         <div class="nav-container">
             <div class="nav-left">
-                <a href="#" class="nav-item">Shop</a>
-                <a href="#" class="nav-item">Collections</a>
+                <a href="#" class="nav-item" aria-label="Shop">Shop</a>
+                <a href="#" class="nav-item" aria-label="Collections">Collections</a>
             </div>
             
             <div class="nav-logo">
-                <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg">
+                <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" title="PAFFO Logo">
                   <!-- Outer rind - purple gradient -->
                   <circle cx="100" cy="100" r="90" fill="url(#rindGradient)"/>
                   
@@ -100,20 +132,23 @@
             </div>
             
             <div class="nav-right">
-                <a href="#" class="nav-item">Lookbook</a>
-                <a href="#" class="nav-item">About</a>
-                <a href="#" class="nav-item">Contact</a>
+                <a href="#" class="nav-item" aria-label="Lookbook">Lookbook</a>
+                <a href="#" class="nav-item" aria-label="About">About</a>
+                <a href="#" class="nav-item" aria-label="Contact">Contact</a>
             </div>
             
-            <div class="hamburger">
+            <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
                 <span></span>
                 <span></span>
                 <span></span>
             </div>
         </div>
         
-        <div class="mobile-menu">
-            <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 80px; height: 80px;">
+        <div class="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title" hidden>
+            <h2 id="mobile-menu-title" class="visually-hidden">Mobile Menu</h2>
+            <button class="close-mobile-menu" aria-label="Close menu" type="button">&times;</button>
+            
+            <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 80px; height: 80px;" title="PAFFO Logo">
               <!-- Outer rind - purple gradient -->
               <circle cx="100" cy="100" r="90" fill="url(#mobileRindGradient)"/>
               
@@ -158,16 +193,16 @@
               </defs>
             </svg>
             
-            <a href="#" class="mobile-nav-item">Shop</a>
-            <a href="#" class="mobile-nav-item">Collections</a>
-            <a href="#" class="mobile-nav-item">Lookbook</a>
-            <a href="#" class="mobile-nav-item">About</a>
-            <a href="#" class="mobile-nav-item">Contact</a>
+            <a href="#" class="mobile-nav-item" aria-label="Shop">Shop</a>
+            <a href="#" class="mobile-nav-item" aria-label="Collections">Collections</a>
+            <a href="#" class="mobile-nav-item" aria-label="Lookbook">Lookbook</a>
+            <a href="#" class="mobile-nav-item" aria-label="About">About</a>
+            <a href="#" class="mobile-nav-item" aria-label="Contact">Contact</a>
         </div>
     </nav>
 
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" role="banner" aria-label="Hero section">
         <div class="hero-container">
             <div class="hero-content">
                 <h1 class="hero-title fade-in">PAFFO</h1>
@@ -184,37 +219,40 @@
     <section id="collections" class="collections-section">
         <div class="container">
             <h2 class="section-title slide-left">Our Collections</h2>
-            <div class="collections-grid grid-3">
-                <div class="collection-card">
+            <div class="collections-grid grid-3" role="list">
+                <div class="collection-card" role="listitem">
                     <div class="collection-image-container">
                         <img src="/img/collections/winter-elegance.jpg" alt="Winter Elegance Collection" class="collection-image">
                     </div>
                     <div class="collection-info">
                         <h3>Winter Elegance</h3>
                         <p>2025 Winter Collection</p>
-                        <a href="#" class="btn-secondary">View Collection</a>
+                        <a href="#" class="btn-secondary" aria-describedby="winter-elegance-desc">View Collection</a>
+                        <p id="winter-elegance-desc" class="visually-hidden">Collection featuring elegant winter wear for the cold season</p>
                     </div>
                 </div>
                 
-                <div class="collection-card">
+                <div class="collection-card" role="listitem">
                     <div class="collection-image-container">
                         <img src="/img/collections/urban-luxe.jpg" alt="Urban Luxe Collection" class="collection-image">
                     </div>
                     <div class="collection-info">
                         <h3>Urban Luxe</h3>
                         <p>City Wear Collection</p>
-                        <a href="#" class="btn-secondary">View Collection</a>
+                        <a href="#" class="btn-secondary" aria-describedby="urban-luxe-desc">View Collection</a>
+                        <p id="urban-luxe-desc" class="visually-hidden">Urban-inspired luxury clothing for city living</p>
                     </div>
                 </div>
                 
-                <div class="collection-card">
+                <div class="collection-card" role="listitem">
                     <div class="collection-image-container">
                         <img src="/img/collections/evening-opulence.jpg" alt="Evening Opulence Collection" class="collection-image">
                     </div>
                     <div class="collection-info">
                         <h3>Evening Opulence</h3>
                         <p>Special Occasion</p>
-                        <a href="#" class="btn-secondary">View Collection</a>
+                        <a href="#" class="btn-secondary" aria-describedby="evening-opulence-desc">View Collection</a>
+                        <p id="evening-opulence-desc" class="visually-hidden">Luxurious evening wear for special occasions</p>
                     </div>
                 </div>
             </div>
@@ -222,20 +260,21 @@
     </section>
 
     <!-- Product Showcase -->
-    <section class="products-section">
+    <section class="products-section" id="main-content" aria-labelledby="products-heading">
+        <h2 id="products-heading" class="visually-hidden">Featured Products</h2>
         <div class="container">
             <h2 class="section-title slide-right">Featured Products</h2>
             <div class="products-grid grid-4">
-                <div class="product-card">
+                <div itemscope itemtype="http://schema.org/Product" class="product-card">
                     <div class="product-image-container">
                         <img src="/img/products/cashmere-scarf-main.jpg" alt="Cashmere Scarf" class="product-image-main">
                         <img src="/img/products/cashmere-scarf-hover.jpg" alt="Cashmere Scarf" class="product-image-hover">
                         <div class="product-badge">New</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Cashmere Scarf</h3>
-                        <p class="product-description">Ultra-soft Mongolian cashmere</p>
-                        <div class="product-price">$295</div>
+                        <h3 class="product-name" itemprop="name">Cashmere Scarf</h3>
+                        <p class="product-description" itemprop="description">Ultra-soft Mongolian cashmere</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$295</span></div>
                         
                         <div class="product-actions">
                             <button class="btn-quick-view">Quick View</button>
@@ -246,25 +285,33 @@
                             </button>
                         </div>
                         
-                        <div class="product-colors">
-                            <span class="color-swatch" style="background: #4A148C;"></span>
-                            <span class="color-swatch" style="background: #FF9800;"></span>
-                            <span class="color-swatch" style="background: #2E7D32;"></span>
-                            <span class="color-swatch" style="background: #000000;"></span>
+                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Purple color">
+                                <span class="color-swatch" style="background: #4A148C;" data-color="purple"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Orange color">
+                                <span class="color-swatch" style="background: #FF9800;" data-color="orange"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Green color">
+                                <span class="color-swatch" style="background: #2E7D32;" data-color="green"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Black color">
+                                <span class="color-swatch" style="background: #000000;" data-color="black"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card">
+                <div itemscope itemtype="http://schema.org/Product" class="product-card">
                     <div class="product-image-container">
                         <img src="/img/products/wool-coat-main.jpg" alt="Wool Coat" class="product-image-main">
                         <img src="/img/products/wool-coat-hover.jpg" alt="Wool Coat" class="product-image-hover">
                         <div class="product-badge">Bestseller</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Wool Coat</h3>
-                        <p class="product-description">Premium merino wool blend</p>
-                        <div class="product-price">$895</div>
+                        <h3 class="product-name" itemprop="name">Wool Coat</h3>
+                        <p class="product-description" itemprop="description">Premium merino wool blend</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$895</span></div>
                         
                         <div class="product-actions">
                             <button class="btn-quick-view">Quick View</button>
@@ -275,23 +322,29 @@
                             </button>
                         </div>
                         
-                        <div class="product-colors">
-                            <span class="color-swatch" style="background: #424242;"></span>
-                            <span class="color-swatch" style="background: #8E24AA;"></span>
-                            <span class="color-swatch" style="background: #FF9800;"></span>
+                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Gray color">
+                                <span class="color-swatch" style="background: #424242;" data-color="gray"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Purple color">
+                                <span class="color-swatch" style="background: #8E24AA;" data-color="purple"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Orange color">
+                                <span class="color-swatch" style="background: #FF9800;" data-color="orange"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card">
+                <div itemscope itemtype="http://schema.org/Product" class="product-card">
                     <div class="product-image-container">
                         <img src="/img/products/leather-gloves-main.jpg" alt="Leather Gloves" class="product-image-main">
                         <img src="/img/products/leather-gloves-hover.jpg" alt="Leather Gloves" class="product-image-hover">
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Leather Gloves</h3>
-                        <p class="product-description">Italian leather craftsmanship</p>
-                        <div class="product-price">$195</div>
+                        <h3 class="product-name" itemprop="name">Leather Gloves</h3>
+                        <p class="product-description" itemprop="description">Italian leather craftsmanship</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$195</span></div>
                         
                         <div class="product-actions">
                             <button class="btn-quick-view">Quick View</button>
@@ -302,24 +355,30 @@
                             </button>
                         </div>
                         
-                        <div class="product-colors">
-                            <span class="color-swatch" style="background: #000000;"></span>
-                            <span class="color-swatch" style="background: #8E24AA;"></span>
-                            <span class="color-swatch" style="background: #FFD54F;"></span>
+                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Black color">
+                                <span class="color-swatch" style="background: #000000;" data-color="black"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Purple color">
+                                <span class="color-swatch" style="background: #8E24AA;" data-color="purple"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Light yellow color">
+                                <span class="color-swatch" style="background: #FFD54F;" data-color="light-yellow"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
                 
-                <div class="product-card">
+                <div itemscope itemtype="http://schema.org/Product" class="product-card">
                     <div class="product-image-container">
                         <img src="/img/products/silk-belt-main.jpg" alt="Silk Belt" class="product-image-main">
                         <img src="/img/products/silk-belt-hover.jpg" alt="Silk Belt" class="product-image-hover">
                         <div class="product-badge">Limited</div>
                     </div>
                     <div class="product-info">
-                        <h3 class="product-name">Silk Belt</h3>
-                        <p class="product-description">Handwoven silk with gold buckle</p>
-                        <div class="product-price">$345</div>
+                        <h3 class="product-name" itemprop="name">Silk Belt</h3>
+                        <p class="product-description" itemprop="description">Handwoven silk with gold buckle</p>
+                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$345</span></div>
                         
                         <div class="product-actions">
                             <button class="btn-quick-view">Quick View</button>
@@ -330,10 +389,16 @@
                             </button>
                         </div>
                         
-                        <div class="product-colors">
-                            <span class="color-swatch" style="background: #FFD700;"></span>
-                            <span class="color-swatch" style="background: #4A148C;"></span>
-                            <span class="color-swatch" style="background: #2E7D32;"></span>
+                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Gold color">
+                                <span class="color-swatch" style="background: #FFD700;" data-color="gold"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Purple color">
+                                <span class="color-swatch" style="background: #4A148C;" data-color="purple"></span>
+                            </button>
+                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Green color">
+                                <span class="color-swatch" style="background: #2E7D32;" data-color="green"></span>
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -402,9 +467,22 @@
                 <h2 class="section-title">Join Our Inner Circle</h2>
                 <p>Be the first to know about new collections, exclusive events, and special offers.</p>
                 
-                <form class="newsletter-form">
-                    <input type="email" placeholder="Enter your email address" required>
-                    <button type="submit" class="btn-primary">Subscribe</button>
+                <form class="newsletter-form" action="#" method="post">
+                    <div class="form-group">
+                        <input 
+                            type="email" 
+                            id="newsletter-email" 
+                            name="email" 
+                            placeholder="Enter your email address" 
+                            required
+                            aria-describedby="privacy-notice"
+                        >
+                        <button type="submit" class="btn-primary">Subscribe</button>
+                    </div>
+                    <div class="form-note" id="privacy-notice">
+                        <input type="checkbox" id="privacy-consent" name="consent" required>
+                        <label for="privacy-consent">I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></label>
+                    </div>
                 </form>
                 
                 <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
@@ -413,11 +491,11 @@
     </section>
 
     <!-- Footer -->
-    <footer class="footer">
+    <footer class="footer" aria-label="Footer">
         <div class="container">
             <div class="footer-grid grid-4">
                 <div class="footer-brand">
-                    <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100px; height: 100px;">
+                    <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100px; height: 100px;" title="PAFFO Logo">
                       <!-- Outer rind - purple gradient -->
                       <circle cx="100" cy="100" r="90" fill="url(#footerRindGradient)"/>
                       
@@ -467,40 +545,40 @@
                 <div class="footer-links">
                     <h3>Shop</h3>
                     <ul>
-                        <li><a href="#">Outerwear</a></li>
-                        <li><a href="#">Scarves</a></li>
-                        <li><a href="#">Gloves</a></li>
-                        <li><a href="#">Belts</a></li>
-                        <li><a href="#">Hats & Caps</a></li>
-                        <li><a href="#">Bags & Accessories</a></li>
+                        <li><a href="#" aria-label="Outerwear">Outerwear</a></li>
+                        <li><a href="#" aria-label="Scarves">Scarves</a></li>
+                        <li><a href="#" aria-label="Gloves">Gloves</a></li>
+                        <li><a href="#" aria-label="Belts">Belts</a></li>
+                        <li><a href="#" aria-label="Hats & Caps">Hats & Caps</a></li>
+                        <li><a href="#" aria-label="Bags & Accessories">Bags & Accessories</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-links">
                     <h3>Customer Service</h3>
                     <ul>
-                        <li><a href="#">Contact Us</a></li>
-                        <li><a href="#">Shipping Policy</a></li>
-                        <li><a href="#">Returns & Exchanges</a></li>
-                        <li><a href="#">Care Instructions</a></li>
-                        <li><a href="#">FAQ</a></li>
-                        <li><a href="#">Size Guide</a></li>
+                        <li><a href="#" aria-label="Contact Us">Contact Us</a></li>
+                        <li><a href="#" aria-label="Shipping Policy">Shipping Policy</a></li>
+                        <li><a href="#" aria-label="Returns & Exchanges">Returns & Exchanges</a></li>
+                        <li><a href="#" aria-label="Care Instructions">Care Instructions</a></li>
+                        <li><a href="#" aria-label="FAQ">FAQ</a></li>
+                        <li><a href="#" aria-label="Size Guide">Size Guide</a></li>
                     </ul>
                 </div>
                 
                 <div class="footer-contact">
                     <h3>Contact</h3>
                     <ul>
-                        <li>hello@paffo.com</li>
-                        <li>+1 (555) 123-4567</li>
+                        <li><a href="mailto:hello@paffo.com" aria-label="Email us at hello@paffo.com">hello@paffo.com</a></li>
+                        <li><a href="tel:+15551234567" aria-label="Call us at +1 (555) 123-4567">+1 (555) 123-4567</a></li>
                         <li>123 Luxury Avenue<br>New York, NY 10001</li>
                     </ul>
                     
                     <div class="social-icons">
-                        <a href="#"><span>Instagram</span></a>
-                        <a href="#"><span>Pinterest</span></a>
-                        <a href="#"><span>TikTok</span></a>
-                        <a href="#"><span>YouTube</span></a>
+                        <a href="#" aria-label="Follow us on Instagram">Instagram</a>
+                        <a href="#" aria-label="Follow us on Pinterest">Pinterest</a>
+                        <a href="#" aria-label="Follow us on TikTok">TikTok</a>
+                        <a href="#" aria-label="Follow us on YouTube">YouTube</a>
                     </div>
                 </div>
             </div>
@@ -508,13 +586,16 @@
             <div class="footer-bottom">
                 <p>&copy; 2026 PAFFO. All rights reserved.</p>
                 <div class="footer-legal">
-                    <a href="#">Privacy Policy</a>
-                    <a href="#">Terms of Service</a>
-                    <a href="#">Accessibility</a>
+                    <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
+                    <a href="#" aria-label="Terms of Service">Terms of Service</a>
+                    <a href="#" aria-label="Accessibility Statement">Accessibility</a>
                 </div>
             </div>
         </div>
     </footer>
+
+    <!-- Security Headers -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
 
     <!-- JavaScript Files -->
     <script src="/js/main.js"></script>
