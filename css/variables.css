@@ -1,0 +1,45 @@
+:root {
+  /* Passion Fruit Colors */
+  --pf-purple: #4A148C;
+  --pf-purple-light: #6A1B9A;
+  --pf-purple-dark: #8E24AA;
+  --pf-orange: #FF9800;
+  --pf-orange-light: #FFB74D;
+  --pf-orange-dark: #FFD54F;
+  --pf-green: #2E7D32;
+  --pf-green-light: #4CAF50;
+  --pf-green-dark: #81C784;
+  --pf-gold: #FFD700;
+  --pf-gold-light: #FFC107;
+  
+  /* Neutral Colors */
+  --neutral-white: #F8F5F2;
+  --neutral-white-pure: #FFFFFF;
+  --neutral-gray-light: #E0E0E0;
+  --neutral-gray: #BDBDBD;
+  --neutral-gray-dark: #757575;
+  --neutral-charcoal: #424242;
+  --neutral-charcoal-dark: #212121;
+  --neutral-black: #000000;
+  
+  /* Theme Colors */
+  --bg-primary: var(--neutral-white);
+  --bg-secondary: var(--neutral-white-pure);
+  --text-primary: var(--neutral-charcoal-dark);
+  --text-secondary: var(--neutral-gray-dark);
+  --accent-primary: var(--pf-purple);
+  --accent-secondary: var(--pf-gold);
+  --border-color: var(--neutral-gray-light);
+  
+  /* Font Sizes */
+  --font-xs: 12px;
+  --font-sm: 14px;
+  --font-base: 16px;
+  --font-lg: 18px;
+  --font-xl: 24px;
+  --font-2xl: 32px;
+  --font-3xl: 48px;
+  --font-4xl: 64px;
+  --font-5xl: 80px;
+  --font-6xl: 120px;
+}
