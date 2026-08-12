@@ -1,606 +1,342 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>PAFFO | Luxury Outerwear & Accessories</title>
-    <meta name="description" content="Premium luxury outerwear and accessories crafted with passion. Discover our exclusive collections of coats, scarves, gloves and more.">
-    
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://paffo.com">
-    
-    <!-- Open Graph / Social Media Meta Tags -->
-    <meta property="og:title" content="PAFFO | Luxury Outerwear & Accessories">
-    <meta property="og:description" content="Premium luxury outerwear and accessories crafted with passion.">
-    <meta property="og:image" content="/img/og-image.jpg">
-    <meta property="og:url" content="https://paffo.com">
-    <meta property="og:type" content="website">
-    <meta name="twitter:card" content="summary_large_image">
-    
-    <!-- Structured Data -->
-    <script type="application/ld+json">
-    {
-      "@context": "https://schema.org",
-      "@type": "Organization",
-      "name": "PAFFO",
-      "description": "Premium luxury outerwear and accessories crafted with passion.",
-      "url": "https://paffo.com",
-      "logo": "/img/logo.png",
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+1-555-123-4567",
-        "contactType": "customer service",
-        "areaServed": "US",
-        "availableLanguage": "en"
-      },
-      "sameAs": [
-        "https://www.instagram.com/paffo",
-        "https://www.pinterest.com/paffo",
-        "https://www.tiktok.com/@paffo",
-        "https://www.youtube.com/paffo"
-      ]
-    }
-    </script>
-    
-    <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="/img/favicon.ico">
-    <link rel="apple-touch-icon" sizes="180x180" href="/img/apple-touch-icon.png">
-    
-    <!-- Web Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Lora:ital,wght@0,400;0,500;1,400&family=Montserrat:wght@300;400;600&display=swap" rel="stylesheet">
-    
-    <!-- CSS Files -->
-    <link rel="stylesheet" href="/css/reset.css">
-    <link rel="stylesheet" href="/css/variables.css">
-    <link rel="stylesheet" href="/css/base.css">
-    <link rel="stylesheet" href="/css/layout.css">
-    <link rel="stylesheet" href="/css/components.css">
-    <link rel="stylesheet" href="/css/navigation.css">
-    <link rel="stylesheet" href="/css/animations.css">
-    <link rel="stylesheet" href="/css/responsive.css">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PAFFO — Wool coats, cut for the city</title>
+<meta name="description" content="Outerwear and accessories from the atelier: wool coats, cashmere scarves, leather gloves. Cut for the city, made to be worn for years.">
+<meta property="og:title" content="PAFFO — Cut for the city. Worn for years.">
+<meta property="og:description" content="Outerwear and accessories from the atelier. No seasons, no noise.">
+<meta property="og:image" content="/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:url" content="https://paffo.ru/">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="robots" content="index,follow">
+<link rel="canonical" href="https://paffo.ru/">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%231A1917%22/><text x=%2232%22 y=%2244%22 font-size=%2236%22 font-family=%22Georgia%22 fill=%22%23A67C3D%22 text-anchor=%22middle%22>P</text></svg>">
+
+<link rel="sitemap" href="/sitemap.xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PAFFO","url":"https://paffo.ru/","description":"Luxury outerwear and accessories from the atelier."}</script>
+<style>
+:root{
+  --ink:#1A1917; --ink-2:#26241F; --ivory:#F4F0E8; --ivory-dim:#B9B2A4;
+  --brass:#A67C3D; --oxblood:#5C1F2E;
+  --font-d:"Cormorant Garamond",Georgia,serif;
+  --font-b:"Lora",Georgia,serif;
+  --font-m:"JetBrains Mono",ui-monospace,monospace;
+  --bg:var(--ink); --fg:var(--ivory); --muted:var(--ivory-dim); --accent:var(--brass);
+  --muted-lt:#6F6757; --accent-lt:#8A642A; --cap-fg:#F4F0E8; --cap-dim:#C9BFA9;
+  --line:color-mix(in srgb,var(--fg) 14%,transparent);
+}
+[data-theme="light"]{ --bg:var(--ivory); --fg:var(--ink); --muted:var(--muted-lt); --accent:var(--accent-lt); --line:color-mix(in srgb,var(--fg) 14%,transparent); }
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:84px}
+body{font-family:var(--font-b);background:var(--bg);color:var(--fg);line-height:1.65;transition:background .3s,color .3s}
+img{display:block;max-width:100%;height:auto}
+a{color:inherit;text-decoration:none}
+button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
+:focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+
+.mono{font-family:var(--font-m);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+
+/* nav */
+.nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px)}
+.logo{font-family:var(--font-d);font-size:26px;letter-spacing:.22em;font-weight:600}
+.logo i{font-style:normal;color:var(--accent)}
+.menu{display:flex;gap:26px;list-style:none}
+.menu a{font-family:var(--font-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
+.menu a:hover{color:var(--fg)}
+.nav-actions{display:flex;gap:10px}
+.theme-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:8px;font-size:16px;transition:background .2s}
+.theme-btn:hover{background:var(--line)}
+.burger{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:8px;font-size:18px}
+.mobile-panel{position:fixed;inset:0;z-index:50;background:var(--bg);display:none;flex-direction:column;gap:8px;padding:24px}
+.mobile-panel.open{display:flex}
+.mobile-panel a{font-family:var(--font-d);font-size:34px;padding:10px 4px;border-bottom:1px solid var(--line)}
+
+/* hero */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:5vw;padding:130px 5vw 80px;max-width:1400px;margin:0 auto}
+.hero .eyebrow{margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.hero .eyebrow::after{content:"";flex:1;max-width:120px;height:1px;background:var(--accent)}
+.hero h1{font-family:var(--font-d);font-weight:500;font-size:clamp(44px,6.5vw,92px);line-height:1.02;letter-spacing:.005em}
+.hero h1 em{font-style:italic;color:var(--accent)}
+.hero .sub{margin-top:24px;max-width:38ch;color:var(--muted);font-size:17px}
+.cta-row{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
+.btn{padding:14px 28px;border-radius:2px;font-family:var(--font-m);font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:transform .15s,background .2s}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--accent);color:var(--ink)}
+.btn-ghost{border:1px solid var(--line);color:var(--fg)}
+.hero-fig{position:relative}
+.hero-fig img{aspect-ratio:4/5;object-fit:cover;border-radius:2px}
+.hero-fig .look{position:absolute;left:-14px;top:-14px;background:var(--accent);color:var(--ink);padding:8px 12px;font-family:var(--font-m);font-size:11px;letter-spacing:.1em}
+.hero-fig .stitch{position:absolute;bottom:-10px;right:-10px;width:52%;height:52%;border:1px solid var(--accent);pointer-events:none}
+
+/* sections */
+.section{padding:110px 5vw;max-width:1400px;margin:0 auto}
+.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:50px;border-bottom:1px solid var(--line);padding-bottom:18px}
+.section-head h2{font-family:var(--font-d);font-weight:500;font-size:clamp(30px,4vw,48px)}
+.section-head .idx{font-family:var(--font-m);font-size:12px;color:var(--muted);letter-spacing:.14em}
+
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.card{position:relative;overflow:hidden}
+.card img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .4s}
+.card:hover img{transform:scale(1.03)}
+.card .cap{position:absolute;inset:auto 0 0 0;padding:34px 18px 16px;background:linear-gradient(to top,rgba(10,9,7,.82),transparent);color:var(--cap-fg)}
+.card .cap b{font-family:var(--font-d);font-size:22px;font-weight:500;display:block}
+.card .cap span{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cap-dim)}
+.card .no{position:absolute;top:12px;left:12px;background:var(--bg);color:var(--fg);font-family:var(--font-m);font-size:10px;letter-spacing:.1em;padding:5px 8px}
+
+/* products */
+.prod img{aspect-ratio:1;object-fit:cover}
+.prod .nm{display:flex;justify-content:space-between;margin-top:12px;font-size:15px}
+.prod .nm i{font-style:normal;font-family:var(--font-m);font-size:11px;color:var(--muted)}
+.prod .pr{font-family:var(--font-m);font-size:12px;color:var(--accent);margin-top:2px}
+
+/* craft */
+.craft{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
+.craft img{aspect-ratio:3/2;object-fit:cover}
+.craft h2{font-family:var(--font-d);font-weight:500;font-size:clamp(30px,4vw,44px);margin:16px 0}
+.craft p{color:var(--muted);max-width:46ch}
+
+/* quote */
+.quote{text-align:center;padding:120px 5vw;max-width:900px;margin:0 auto}
+.quote blockquote{font-family:var(--font-d);font-size:clamp(24px,3.4vw,40px);font-style:italic;line-height:1.3}
+.quote cite{display:block;margin-top:22px;font-family:var(--font-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-style:normal}
+
+/* signup */
+.signup{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center;border:1px solid var(--line);padding:5vw}
+.signup h2{font-family:var(--font-d);font-weight:500;font-size:clamp(28px,3.4vw,42px)}
+.signup p{color:var(--muted);margin-top:12px}
+.signup form{margin-top:24px;display:grid;gap:10px}
+.signup label{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+.signup input{padding:14px 16px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--fg);font-family:var(--font-b);font-size:15px}
+.signup input:focus{outline:2px solid var(--accent);outline-offset:0}
+
+.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+.ledger{border-top:1px solid var(--line)}
+.ledger .row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ledger .row b{font-family:var(--font-b);font-weight:400;font-size:17px;max-width:60ch}
+
+/* footer */
+
+footer{border-top:1px solid var(--line);padding:44px 5vw}
+.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;font-family:var(--font-m);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.foot a{color:var(--accent)}
+
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
+@media (max-width:1100px){.grid5{grid-template-columns:repeat(3,1fr)}}
+@media (max-width:960px){
+  .menu{display:none}.burger{display:block}
+  .hero{grid-template-columns:1fr;padding-top:120px;gap:40px}
+  .hero-fig{max-width:520px}
+  .grid3,.grid4{grid-template-columns:repeat(2,1fr)}
+  .craft,.signup{grid-template-columns:1fr}
+}
+@media (max-width:560px){.grid3,.grid4{grid-template-columns:1fr}}
+</style>
 </head>
-<body>
-    <!-- Skip link for accessibility -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-    
-    <!-- Navigation -->
-    <nav class="navbar" aria-label="Main navigation">
-        <div class="nav-container">
-            <div class="nav-left">
-                <a href="#" class="nav-item" aria-label="Shop">Shop</a>
-                <a href="#" class="nav-item" aria-label="Collections">Collections</a>
-            </div>
-            
-            <div class="nav-logo">
-                <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" title="PAFFO Logo">
-                  <!-- Outer rind - purple gradient -->
-                  <circle cx="100" cy="100" r="90" fill="url(#rindGradient)"/>
-                  
-                  <!-- Inner flesh - orange gradient -->
-                  <circle cx="100" cy="100" r="75" fill="url(#fleshGradient)"/>
-                  
-                  <!-- Seeds - scattered pattern -->
-                  <g class="seeds">
-                    <!-- Seed 1 -->
-                    <ellipse cx="70" cy="80" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 2 -->
-                    <ellipse cx="130" cy="80" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 3 -->
-                    <ellipse cx="100" cy="110" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 4 -->
-                    <ellipse cx="80" cy="130" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 5 -->
-                    <ellipse cx="120" cy="130" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 6 -->
-                    <ellipse cx="60" cy="100" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 7 -->
-                    <ellipse cx="140" cy="100" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 8 -->
-                    <ellipse cx="90" cy="60" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                    <!-- Seed 9 -->
-                    <ellipse cx="110" cy="60" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                  </g>
-                  
-                  <!-- Highlight - glossy effect -->
-                  <circle cx="85" cy="85" r="25" fill="url(#highlightGradient)" opacity="0.3"/>
-                  
-                  <!-- Brand name text -->
-                  <text x="100" y="175" text-anchor="middle" font-family="Georgia, serif" font-size="24" font-weight="bold" fill="#FFFFFF" letter-spacing="2">PAFFO</text>
-                  
-                  <!-- Gradients definitions -->
-                  <defs>
-                    <radialGradient id="rindGradient" cx="50%" cy="50%" r="60%">
-                      <stop offset="0%" stop-color="#4A148C" stop-opacity="1"/>
-                      <stop offset="50%" stop-color="#6A1B9A" stop-opacity="1"/>
-                      <stop offset="100%" stop-color="#8E24AA" stop-opacity="1"/>
-                    </radialGradient>
-                    
-                    <radialGradient id="fleshGradient" cx="50%" cy="50%" r="70%">
-                      <stop offset="0%" stop-color="#FF9800" stop-opacity="1"/>
-                      <stop offset="50%" stop-color="#FFB74D" stop-opacity="1"/>
-                      <stop offset="100%" stop-color="#FFD54F" stop-opacity="1"/>
-                    </radialGradient>
-                    
-                    <radialGradient id="highlightGradient" cx="30%" cy="30%" r="70%">
-                      <stop offset="0%" stop-color="#FFFFFF" stop-opacity="1"/>
-                      <stop offset="100%" stop-color="#FFFFFF" stop-opacity="0"/>
-                    </radialGradient>
-                  </defs>
-                </svg>
-            </div>
-            
-            <div class="nav-right">
-                <a href="#" class="nav-item" aria-label="Lookbook">Lookbook</a>
-                <a href="#" class="nav-item" aria-label="About">About</a>
-                <a href="#" class="nav-item" aria-label="Contact">Contact</a>
-            </div>
-            
-            <div class="hamburger" role="button" tabindex="0" aria-label="Open menu" aria-expanded="false">
-                <span></span>
-                <span></span>
-                <span></span>
-            </div>
-        </div>
-        
-        <div class="mobile-menu" role="dialog" aria-modal="true" aria-labelledby="mobile-menu-title" hidden>
-            <h2 id="mobile-menu-title" class="visually-hidden">Mobile Menu</h2>
-            <button class="close-mobile-menu" aria-label="Close menu" type="button">&times;</button>
-            
-            <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 80px; height: 80px;" title="PAFFO Logo">
-              <!-- Outer rind - purple gradient -->
-              <circle cx="100" cy="100" r="90" fill="url(#mobileRindGradient)"/>
-              
-              <!-- Inner flesh - orange gradient -->
-              <circle cx="100" cy="100" r="75" fill="url(#mobileFleshGradient)"/>
-              
-              <!-- Seeds - scattered pattern -->
-              <g class="seeds">
-                <!-- Seed 1 -->
-                <ellipse cx="70" cy="80" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 2 -->
-                <ellipse cx="130" cy="80" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 3 -->
-                <ellipse cx="100" cy="110" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 4 -->
-                <ellipse cx="80" cy="130" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 5 -->
-                <ellipse cx="120" cy="130" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 6 -->
-                <ellipse cx="60" cy="100" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 7 -->
-                <ellipse cx="140" cy="100" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 8 -->
-                <ellipse cx="90" cy="60" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                <!-- Seed 9 -->
-                <ellipse cx="110" cy="60" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-              </g>
-              
-              <!-- Gradients definitions for mobile -->
-              <defs>
-                <radialGradient id="mobileRindGradient" cx="50%" cy="50%" r="60%">
-                  <stop offset="0%" stop-color="#4A148C" stop-opacity="1"/>
-                  <stop offset="50%" stop-color="#6A1B9A" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="#8E24AA" stop-opacity="1"/>
-                </radialGradient>
-                
-                <radialGradient id="mobileFleshGradient" cx="50%" cy="50%" r="70%">
-                  <stop offset="0%" stop-color="#FF9800" stop-opacity="1"/>
-                  <stop offset="50%" stop-color="#FFB74D" stop-opacity="1"/>
-                  <stop offset="100%" stop-color="#FFD54F" stop-opacity="1"/>
-                </radialGradient>
-              </defs>
-            </svg>
-            
-            <a href="#" class="mobile-nav-item" aria-label="Shop">Shop</a>
-            <a href="#" class="mobile-nav-item" aria-label="Collections">Collections</a>
-            <a href="#" class="mobile-nav-item" aria-label="Lookbook">Lookbook</a>
-            <a href="#" class="mobile-nav-item" aria-label="About">About</a>
-            <a href="#" class="mobile-nav-item" aria-label="Contact">Contact</a>
-        </div>
-    </nav>
+<body data-theme="dark">
 
-    <!-- Hero Section -->
-    <section class="hero" role="banner" aria-label="Hero section">
-        <div class="hero-container">
-            <div class="hero-content">
-                <h1 class="hero-title fade-in">PAFFO</h1>
-                <p class="hero-subtitle fade-in">Passion Woven Into Every Thread</p>
-                <a href="#collections" class="btn-primary fade-in">Explore Collections</a>
-            </div>
-            <div class="hero-scroll-indicator fade-in">
-                <div class="scroll-arrow"></div>
-            </div>
-        </div>
-    </section>
+<nav class="nav">
+  <div class="logo">PAFF<i>O</i></div>
+  <ul class="menu">
+    <li><a href="#collections">Collections</a></li>
+    <li><a href="#lookbook">Lookbook</a></li>
+    <li><a href="#products">Products</a></li>
+    <li><a href="#craft">Atelier</a></li>
+    <li><a href="#inner">Inner circle</a></li>
+  </ul>
+  <div class="nav-actions">
+    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
+    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+</nav>
 
-    <!-- Collections Section -->
-    <section id="collections" class="collections-section">
-        <div class="container">
-            <h2 class="section-title slide-left">Our Collections</h2>
-            <div class="collections-grid grid-3" role="list">
-                <div class="collection-card" role="listitem">
-                    <div class="collection-image-container">
-                        <img src="/img/collections/winter-elegance.jpg" alt="Winter Elegance Collection" class="collection-image">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Winter Elegance</h3>
-                        <p>2025 Winter Collection</p>
-                        <a href="#" class="btn-secondary" aria-describedby="winter-elegance-desc">View Collection</a>
-                        <p id="winter-elegance-desc" class="visually-hidden">Collection featuring elegant winter wear for the cold season</p>
-                    </div>
-                </div>
-                
-                <div class="collection-card" role="listitem">
-                    <div class="collection-image-container">
-                        <img src="/img/collections/urban-luxe.jpg" alt="Urban Luxe Collection" class="collection-image">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Urban Luxe</h3>
-                        <p>City Wear Collection</p>
-                        <a href="#" class="btn-secondary" aria-describedby="urban-luxe-desc">View Collection</a>
-                        <p id="urban-luxe-desc" class="visually-hidden">Urban-inspired luxury clothing for city living</p>
-                    </div>
-                </div>
-                
-                <div class="collection-card" role="listitem">
-                    <div class="collection-image-container">
-                        <img src="/img/collections/evening-opulence.jpg" alt="Evening Opulence Collection" class="collection-image">
-                    </div>
-                    <div class="collection-info">
-                        <h3>Evening Opulence</h3>
-                        <p>Special Occasion</p>
-                        <a href="#" class="btn-secondary" aria-describedby="evening-opulence-desc">View Collection</a>
-                        <p id="evening-opulence-desc" class="visually-hidden">Luxurious evening wear for special occasions</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<div class="mobile-panel" id="mobilePanel">
+  <a href="#collections">Collections</a>
+  <a href="#lookbook">Lookbook</a>
+  <a href="#products">Products</a>
+  <a href="#craft">Atelier</a>
+  <a href="#inner">Inner circle</a>
+</div>
 
-    <!-- Product Showcase -->
-    <section class="products-section" id="main-content" aria-labelledby="products-heading">
-        <h2 id="products-heading" class="visually-hidden">Featured Products</h2>
-        <div class="container">
-            <h2 class="section-title slide-right">Featured Products</h2>
-            <div class="products-grid grid-4">
-                <div itemscope itemtype="http://schema.org/Product" class="product-card">
-                    <div class="product-image-container">
-                        <img src="/img/products/cashmere-scarf-main.jpg" alt="Cashmere Scarf" class="product-image-main">
-                        <img src="/img/products/cashmere-scarf-hover.jpg" alt="Cashmere Scarf" class="product-image-hover">
-                        <div class="product-badge">New</div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name" itemprop="name">Cashmere Scarf</h3>
-                        <p class="product-description" itemprop="description">Ultra-soft Mongolian cashmere</p>
-                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$295</span></div>
-                        
-                        <div class="product-actions">
-                            <button class="btn-quick-view">Quick View</button>
-                            <button class="btn-add-to-cart">
-                                <svg width="20" height="20" viewBox="0 0 24 24">
-                                    <path d="M3 3h18l-2 10H7L3 3zm16 0l-2.5 7h-11L7 3H3v18h18V3h-2z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Purple color">
-                                <span class="color-swatch" style="background: #4A148C;" data-color="purple"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Orange color">
-                                <span class="color-swatch" style="background: #FF9800;" data-color="orange"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Green color">
-                                <span class="color-swatch" style="background: #2E7D32;" data-color="green"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Black color">
-                                <span class="color-swatch" style="background: #000000;" data-color="black"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div itemscope itemtype="http://schema.org/Product" class="product-card">
-                    <div class="product-image-container">
-                        <img src="/img/products/wool-coat-main.jpg" alt="Wool Coat" class="product-image-main">
-                        <img src="/img/products/wool-coat-hover.jpg" alt="Wool Coat" class="product-image-hover">
-                        <div class="product-badge">Bestseller</div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name" itemprop="name">Wool Coat</h3>
-                        <p class="product-description" itemprop="description">Premium merino wool blend</p>
-                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$895</span></div>
-                        
-                        <div class="product-actions">
-                            <button class="btn-quick-view">Quick View</button>
-                            <button class="btn-add-to-cart">
-                                <svg width="20" height="20" viewBox="0 0 24 24">
-                                    <path d="M3 3h18l-2 10H7L3 3zm16 0l-2.5 7h-11L7 3H3v18h18V3h-2z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Gray color">
-                                <span class="color-swatch" style="background: #424242;" data-color="gray"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Purple color">
-                                <span class="color-swatch" style="background: #8E24AA;" data-color="purple"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Orange color">
-                                <span class="color-swatch" style="background: #FF9800;" data-color="orange"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div itemscope itemtype="http://schema.org/Product" class="product-card">
-                    <div class="product-image-container">
-                        <img src="/img/products/leather-gloves-main.jpg" alt="Leather Gloves" class="product-image-main">
-                        <img src="/img/products/leather-gloves-hover.jpg" alt="Leather Gloves" class="product-image-hover">
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name" itemprop="name">Leather Gloves</h3>
-                        <p class="product-description" itemprop="description">Italian leather craftsmanship</p>
-                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$195</span></div>
-                        
-                        <div class="product-actions">
-                            <button class="btn-quick-view">Quick View</button>
-                            <button class="btn-add-to-cart">
-                                <svg width="20" height="20" viewBox="0 0 24 24">
-                                    <path d="M3 3h18l-2 10H7L3 3zm16 0l-2.5 7h-11L7 3H3v18h18V3h-2z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Black color">
-                                <span class="color-swatch" style="background: #000000;" data-color="black"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Purple color">
-                                <span class="color-swatch" style="background: #8E24AA;" data-color="purple"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Light yellow color">
-                                <span class="color-swatch" style="background: #FFD54F;" data-color="light-yellow"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-                
-                <div itemscope itemtype="http://schema.org/Product" class="product-card">
-                    <div class="product-image-container">
-                        <img src="/img/products/silk-belt-main.jpg" alt="Silk Belt" class="product-image-main">
-                        <img src="/img/products/silk-belt-hover.jpg" alt="Silk Belt" class="product-image-hover">
-                        <div class="product-badge">Limited</div>
-                    </div>
-                    <div class="product-info">
-                        <h3 class="product-name" itemprop="name">Silk Belt</h3>
-                        <p class="product-description" itemprop="description">Handwoven silk with gold buckle</p>
-                        <div class="product-price" itemprop="offers" itemscope itemtype="http://schema.org/Offer"><span itemprop="price">$345</span></div>
-                        
-                        <div class="product-actions">
-                            <button class="btn-quick-view">Quick View</button>
-                            <button class="btn-add-to-cart">
-                                <svg width="20" height="20" viewBox="0 0 24 24">
-                                    <path d="M3 3h18l-2 10H7L3 3zm16 0l-2.5 7h-11L7 3H3v18h18V3h-2z" fill="currentColor"/>
-                                </svg>
-                            </button>
-                        </div>
-                        
-                        <div class="product-colors" role="radiogroup" aria-label="Choose color">
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="true" aria-label="Gold color">
-                                <span class="color-swatch" style="background: #FFD700;" data-color="gold"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Purple color">
-                                <span class="color-swatch" style="background: #4A148C;" data-color="purple"></span>
-                            </button>
-                            <button type="button" class="color-swatch-btn" role="radio" aria-checked="false" aria-label="Green color">
-                                <span class="color-swatch" style="background: #2E7D32;" data-color="green"></span>
-                            </button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<header class="hero" id="top">
+  <div class="hero-copy">
+    <p class="eyebrow mono">Look №01 — Winter Elegance</p>
+    <h1>Wool coats,<br><em>cut for the city.</em></h1>
+    <p class="sub">Outerwear and accessories from the atelier. Cashmere you'll wear daily, leather that outlives fashion — no seasons, no noise.</p>
+    <div class="cta-row">
+      <a class="btn btn-solid" href="#collections">View the collection</a>
+      <a class="btn btn-ghost" href="#craft">Read the atelier</a>
+    </div>
+  </div>
+  <figure class="hero-fig">
+    <span class="look mono">Look №01</span>
+    <img src="img/hero.webp" alt="A wool overcoat from the PAFFO atelier — look editorial" width="512" height="512">
+    <span class="stitch" aria-hidden="true"></span>
+  </figure>
+</header>
 
-    <!-- Craftsmanship Section -->
-    <section class="craftsmanship-section">
-        <div class="container">
-            <h2 class="section-title slide-left">Our Craftsmanship</h2>
-            <div class="craftsmanship-content">
-                <div class="craftsmanship-text">
-                    <p>At PAFFO, we believe that true luxury lies in the details. Each piece is meticulously crafted by skilled artisans who have perfected their techniques over generations.</p>
-                    <p>We source only the finest materials - Mongolian cashmere, Italian leather, and French silk - ensuring that every garment meets our exacting standards of quality and sustainability.</p>
-                </div>
-                <div class="craftsmanship-image">
-                    <img src="/img/craftsmanship/artisans.jpg" alt="Artisan crafting PAFFO garments">
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section" id="collections">
+  <div class="section-head">
+    <h2>The collections</h2>
+    <span class="idx">01 — 03</span>
+  </div>
+  <div class="grid3">
+    <figure class="card">
+      <span class="no mono">№01</span>
+      <img src="img/collections/winter-elegance.webp" alt="Winter Elegance collection — wool and cashmere" width="900" height="1100">
+      <figcaption class="cap"><b>Winter Elegance</b><span>Wool · Cashmere</span></figcaption>
+    </figure>
+    <figure class="card">
+      <span class="no mono">№02</span>
+      <img src="img/collections/urban-luxe.webp" alt="Urban Luxe collection — dark tailored outerwear" width="900" height="1100">
+      <figcaption class="cap"><b>Urban Luxe</b><span>Tailored · Dark</span></figcaption>
+    </figure>
+    <figure class="card">
+      <span class="no mono">№03</span>
+      <img src="img/collections/evening-opulence.webp" alt="Evening Opulence collection — silk and velvet evening wear" width="900" height="1100">
+      <figcaption class="cap"><b>Evening Opulence</b><span>Silk · Velvet</span></figcaption>
+    </figure>
+  </div>
+</section>
 
-    <!-- Testimonials -->
-    <section class="testimonials-section">
-        <div class="container">
-            <h2 class="section-title slide-right">What Our Clients Say</h2>
-            <div class="testimonials-grid grid-3">
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"The quality of PAFFO's outerwear is exceptional. I've owned their cashmere coat for two winters now, and it still looks as beautiful as the day I bought it."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Sophia Williams</h4>
-                        <p>Luxury Fashion Editor</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"PAFFO's attention to detail is unmatched. Their pieces are investment items that elevate any wardrobe with timeless elegance."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Michael Chen</h4>
-                        <p>Fashion Consultant</p>
-                    </div>
-                </div>
-                
-                <div class="testimonial-card">
-                    <div class="testimonial-content">
-                        <p>"I discovered PAFFO through a friend and haven't looked back. Their customer service is as luxurious as their products."</p>
-                    </div>
-                    <div class="testimonial-author">
-                        <h4>Elena Rodriguez</h4>
-                        <p>Style Influencer</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="section" id="lookbook">
+  <div class="section-head">
+    <h2>The lookbook</h2>
+    <span class="idx">Look №01 — 05</span>
+  </div>
+  <div class="grid5">
+    <figure class="card"><span class="no mono">№01</span><img src="img/lookbook/look-01.webp" alt="Look 01 — wool overcoat, studio editorial" width="512" height="512"><figcaption class="cap"><b>Look №01</b><span>Overcoat — studio</span></figcaption></figure>
+    <figure class="card"><span class="no mono">№02</span><img src="img/collections/urban-luxe.webp" alt="Look 02 — dark tailored overcoat, city" width="512" height="512"><figcaption class="cap"><b>Look №02</b><span>Tailored — city</span></figcaption></figure>
+    <figure class="card"><span class="no mono">№03</span><img src="img/collections/evening-opulence.webp" alt="Look 03 — velvet gown, evening" width="512" height="512"><figcaption class="cap"><b>Look №03</b><span>Velvet — evening</span></figcaption></figure>
+    <figure class="card"><span class="no mono">№04</span><img src="img/products/wool-coat.webp" alt="Look 04 — herringbone wool coat, fabric detail" width="512" height="512"><figcaption class="cap"><b>Look №04</b><span>Wool — fabric</span></figcaption></figure>
+    <figure class="card"><span class="no mono">№05</span><img src="img/products/cashmere-scarf.webp" alt="Look 05 — cashmere scarf, accessory detail" width="512" height="512"><figcaption class="cap"><b>Look №05</b><span>Cashmere — detail</span></figcaption></figure>
+  </div>
+</section>
 
-    <!-- Newsletter -->
-    <section class="newsletter-section">
-        <div class="container">
-            <div class="newsletter-content">
-                <h2 class="section-title">Join Our Inner Circle</h2>
-                <p>Be the first to know about new collections, exclusive events, and special offers.</p>
-                
-                <form class="newsletter-form" action="#" method="post">
-                    <div class="form-group">
-                        <input 
-                            type="email" 
-                            id="newsletter-email" 
-                            name="email" 
-                            placeholder="Enter your email address" 
-                            required
-                            aria-describedby="privacy-notice"
-                        >
-                        <button type="submit" class="btn-primary">Subscribe</button>
-                    </div>
-                    <div class="form-note" id="privacy-notice">
-                        <input type="checkbox" id="privacy-consent" name="consent" required>
-                        <label for="privacy-consent">I agree to the <a href="#">Privacy Policy</a> and <a href="#">Terms of Service</a></label>
-                    </div>
-                </form>
-                
-                <p class="privacy-note">We respect your privacy. Unsubscribe at any time.</p>
-            </div>
-        </div>
-    </section>
+<section class="section" id="products">
+  <div class="section-head">
+    <h2>From the shelf</h2>
+    <span class="idx">Autumn — Winter</span>
+  </div>
+  <div class="grid4">
+    <figure class="card prod">
+      <span class="no mono">P01</span>
+      <img src="img/products/cashmere-scarf.webp" alt="Cashmere scarf in warm ivory" width="800" height="800">
+      <figcaption class="nm"><span>Cashmere Scarf</span><i>№01</i></figcaption>
+      <p class="pr">€ 240</p>
+    </figure>
+    <figure class="card prod">
+      <span class="no mono">P02</span>
+      <img src="img/products/wool-coat.webp" alt="Wool coat in deep charcoal" width="800" height="800">
+      <figcaption class="nm"><span>Wool Coat</span><i>№02</i></figcaption>
+      <p class="pr">€ 1 480</p>
+    </figure>
+    <figure class="card prod">
+      <span class="no mono">P03</span>
+      <img src="img/products/leather-gloves.webp" alt="Leather gloves in aged brass tone" width="800" height="800">
+      <figcaption class="nm"><span>Leather Gloves</span><i>№03</i></figcaption>
+      <p class="pr">€ 320</p>
+    </figure>
+    <figure class="card prod">
+      <span class="no mono">P04</span>
+      <img src="img/products/silk-belt.webp" alt="Silk belt in deep oxblood" width="800" height="800">
+      <figcaption class="nm"><span>Silk Belt</span><i>№04</i></figcaption>
+      <p class="pr">€ 180</p>
+    </figure>
+  </div>
+</section>
 
-    <!-- Footer -->
-    <footer class="footer" aria-label="Footer">
-        <div class="container">
-            <div class="footer-grid grid-4">
-                <div class="footer-brand">
-                    <svg class="paffo-logo" viewBox="0 0 200 200" xmlns="http://www.w3.org/2000/svg" style="width: 100px; height: 100px;" title="PAFFO Logo">
-                      <!-- Outer rind - purple gradient -->
-                      <circle cx="100" cy="100" r="90" fill="url(#footerRindGradient)"/>
-                      
-                      <!-- Inner flesh - orange gradient -->
-                      <circle cx="100" cy="100" r="75" fill="url(#footerFleshGradient)"/>
-                      
-                      <!-- Seeds - scattered pattern -->
-                      <g class="seeds">
-                        <!-- Seed 1 -->
-                        <ellipse cx="70" cy="80" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 2 -->
-                        <ellipse cx="130" cy="80" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 3 -->
-                        <ellipse cx="100" cy="110" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 4 -->
-                        <ellipse cx="80" cy="130" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 5 -->
-                        <ellipse cx="120" cy="130" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 6 -->
-                        <ellipse cx="60" cy="100" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 7 -->
-                        <ellipse cx="140" cy="100" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 8 -->
-                        <ellipse cx="90" cy="60" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                        <!-- Seed 9 -->
-                        <ellipse cx="110" cy="60" rx="8" ry="4" fill="#FFFFFF" opacity="0.9"/>
-                      </g>
-                      
-                      <!-- Gradients definitions for footer -->
-                      <defs>
-                        <radialGradient id="footerRindGradient" cx="50%" cy="50%" r="60%">
-                          <stop offset="0%" stop-color="#4A148C" stop-opacity="1"/>
-                          <stop offset="50%" stop-color="#6A1B9A" stop-opacity="1"/>
-                          <stop offset="100%" stop-color="#8E24AA" stop-opacity="1"/>
-                        </radialGradient>
-                        
-                        <radialGradient id="footerFleshGradient" cx="50%" cy="50%" r="70%">
-                          <stop offset="0%" stop-color="#FF9800" stop-opacity="1"/>
-                          <stop offset="50%" stop-color="#FFB74D" stop-opacity="1"/>
-                          <stop offset="100%" stop-color="#FFD54F" stop-opacity="1"/>
-                        </radialGradient>
-                      </defs>
-                    </svg>
-                    <p>Premium luxury outerwear and accessories crafted with passion.</p>
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Shop</h3>
-                    <ul>
-                        <li><a href="#" aria-label="Outerwear">Outerwear</a></li>
-                        <li><a href="#" aria-label="Scarves">Scarves</a></li>
-                        <li><a href="#" aria-label="Gloves">Gloves</a></li>
-                        <li><a href="#" aria-label="Belts">Belts</a></li>
-                        <li><a href="#" aria-label="Hats & Caps">Hats & Caps</a></li>
-                        <li><a href="#" aria-label="Bags & Accessories">Bags & Accessories</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-links">
-                    <h3>Customer Service</h3>
-                    <ul>
-                        <li><a href="#" aria-label="Contact Us">Contact Us</a></li>
-                        <li><a href="#" aria-label="Shipping Policy">Shipping Policy</a></li>
-                        <li><a href="#" aria-label="Returns & Exchanges">Returns & Exchanges</a></li>
-                        <li><a href="#" aria-label="Care Instructions">Care Instructions</a></li>
-                        <li><a href="#" aria-label="FAQ">FAQ</a></li>
-                        <li><a href="#" aria-label="Size Guide">Size Guide</a></li>
-                    </ul>
-                </div>
-                
-                <div class="footer-contact">
-                    <h3>Contact</h3>
-                    <ul>
-                        <li><a href="mailto:hello@paffo.com" aria-label="Email us at hello@paffo.com">hello@paffo.com</a></li>
-                        <li><a href="tel:+15551234567" aria-label="Call us at +1 (555) 123-4567">+1 (555) 123-4567</a></li>
-                        <li>123 Luxury Avenue<br>New York, NY 10001</li>
-                    </ul>
-                    
-                    <div class="social-icons">
-                        <a href="#" aria-label="Follow us on Instagram">Instagram</a>
-                        <a href="#" aria-label="Follow us on Pinterest">Pinterest</a>
-                        <a href="#" aria-label="Follow us on TikTok">TikTok</a>
-                        <a href="#" aria-label="Follow us on YouTube">YouTube</a>
-                    </div>
-                </div>
-            </div>
-            
-            <div class="footer-bottom">
-                <p>&copy; 2026 PAFFO. All rights reserved.</p>
-                <div class="footer-legal">
-                    <a href="#" aria-label="Privacy Policy">Privacy Policy</a>
-                    <a href="#" aria-label="Terms of Service">Terms of Service</a>
-                    <a href="#" aria-label="Accessibility Statement">Accessibility</a>
-                </div>
-            </div>
-        </div>
-    </footer>
+<section class="section craft" id="craft">
+  <img src="img/craftsmanship/atelier.webp" alt="Inside the PAFFO atelier — a tailor's workbench" width="512" height="512">
+  <div>
+    <p class="mono">The atelier — ligne 02</p>
+    <h2>Made by hand,<br>measured twice.</h2>
+    <p>Every coat is cut from a single bolt, basted, fitted and sewn by one tailor. We do not chase seasons — we make pieces that outlive them.</p>
+    <div class="cta-row">
+      <a class="btn btn-ghost" href="#inner">Join the inner circle</a>
+    </div>
+  </div>
+</section>
 
-    <!-- Security Headers -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com; img-src 'self' data: https:; font-src 'self' https://fonts.gstatic.com; connect-src 'self';">
+<section class="section" id="details">
+  <div class="section-head">
+    <h2>The details</h2>
+    <span class="idx">Specs</span>
+  </div>
+  <div class="ledger">
+    <div class="row"><span class="mono">Fabric</span><b>Italian wool 380g — single origin, one bolt per coat</b></div>
+    <div class="row"><span class="mono">Fit</span><b>Basted and fitted twice. Shoulders basted by hand before the first fitting</b></div>
+    <div class="row"><span class="mono">Care</span><b>Dry clean only. Brush after wear; air once a season</b></div>
+    <div class="row"><span class="mono">Delivery</span><b>7 days worldwide. Returns accepted within 30 days</b></div>
+  </div>
+</section>
 
-    <!-- JavaScript Files -->
-    <script src="/js/main.js"></script>
-    <script src="/js/scroll-animations.js"></script>
-    <script src="/js/mobile-menu.js"></script>
-    <script src="/js/product-interactions.js"></script>
+<section class="quote" id="about">
+  <blockquote>“The coat feels heavier than it looks — in a good way. You can tell someone measured twice.”</blockquote>
+  <cite>— Client, Winter Elegance, 2025</cite>
+</section>
+
+<section class="section" id="inner">
+  <div class="signup">
+    <div>
+      <p class="mono">The inner circle</p>
+      <h2>One letter a season.<br>Nothing more.</h2>
+      <p>A single letter before each collection: what's cut, what's waiting, what's gone. No weekly noise.</p>
+    </div>
+    <form id="signupForm">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" placeholder="you@example.com" required>
+      <button class="btn btn-solid" type="submit">Join the circle</button>
+    </form>
+  </div>
+</section>
+
+<section class="section" id="contact">
+  <div class="section-head">
+    <h2>Contact</h2>
+    <span class="idx">Atelier</span>
+  </div>
+  <div class="ledger">
+    <div class="row"><span class="mono">Studio</span><b>PAFFO — 12 Rue du Faubourg, Paris</b></div>
+    <div class="row"><span class="mono">Email</span><b><a href="mailto:hello@paffo.ru">hello@paffo.ru</a></b></div>
+    <div class="row"><span class="mono">Hours</span><b>Tuesday — Saturday, 10:00 to 18:00</b></div>
+  </div>
+</section>
+
+<footer>
+  <div class="foot">
+    <p>PAFFO © 2026 — Atelier, not a store.</p>
+    <p><a href="/sitemap.xml">Sitemap</a> · <a href="mailto:hello@paffo.ru">hello@paffo.ru</a></p>
+    <p>Look №01 — Winter Elegance</p>
+  </div>
+</footer>
+
+<script>
+const themeBtn = document.getElementById('themeBtn');
+const applyTheme = (t) => {
+  document.documentElement.dataset.theme = t;
+  themeBtn.textContent = t === 'dark' ? '☾' : '☀';
+  try { localStorage.setItem('paffo-theme', t); } catch (e) {}
+};
+themeBtn.addEventListener('click', () => applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
+try { const saved = localStorage.getItem('paffo-theme'); if (saved) applyTheme(saved); } catch (e) {}
+
+document.getElementById('burger').addEventListener('click', () => {
+  const p = document.getElementById('mobilePanel');
+  const open = p.classList.toggle('open');
+  document.getElementById('burger').setAttribute('aria-expanded', String(open));
+});
+document.getElementById('mobilePanel').querySelectorAll('a').forEach(a =>
+  a.addEventListener('click', () => document.getElementById('mobilePanel').classList.remove('open')));
+document.getElementById('signupForm').addEventListener('submit', e => e.preventDefault());
+</script>
 </body>
 </html>
