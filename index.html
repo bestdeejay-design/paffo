@@ -1,342 +1,713 @@
 <!DOCTYPE html>
-<html lang="en" data-theme="dark">
+<html lang="ru" data-theme="dark">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>PAFFO — Wool coats, cut for the city</title>
-<meta name="description" content="Outerwear and accessories from the atelier: wool coats, cashmere scarves, leather gloves. Cut for the city, made to be worn for years.">
-<meta property="og:title" content="PAFFO — Cut for the city. Worn for years.">
-<meta property="og:description" content="Outerwear and accessories from the atelier. No seasons, no noise.">
-<meta property="og:image" content="/img/og-image.jpg">
+<title data-ru="PAFFO — ателье пальто. Шерсть, скроенная по городу" data-en="PAFFO — the coat atelier. Wool, cut for the city">PAFFO — ателье пальто. Шерсть, скроенная по городу</title>
+<meta name="description" content="Ателье PAFFO: пальто из итальянской шерсти, кашемир и кожа. Две примерки, один портной на изделие, пошив 21 день.">
+<meta property="og:title" content="PAFFO — ателье пальто">
+<meta property="og:description" content="Пальто из итальянской шерсти по вашим меркам. Две примерки, один портной на изделие, пошив 21 день.">
+<meta property="og:image" content="https://paffo.ru/img/og-image.jpg">
 <meta property="og:image:width" content="1200">
 <meta property="og:image:height" content="630">
 <meta property="og:url" content="https://paffo.ru/">
 <meta property="og:type" content="website">
+<meta property="og:locale" content="ru_RU">
 <meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#1A1917">
 <meta name="robots" content="index,follow">
 <link rel="canonical" href="https://paffo.ru/">
-<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 fill=%22%231A1917%22/><text x=%2232%22 y=%2244%22 font-size=%2236%22 font-family=%22Georgia%22 fill=%22%23A67C3D%22 text-anchor=%22middle%22>P</text></svg>">
-
+<link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 64 64%22><rect width=%2264%22 height=%2264%22 rx=%2212%22 fill=%22%23A67C3D%22/><text x=%2232%22 y=%2245%22 font-size=%2238%22 font-family=%22Georgia,serif%22 fill=%22%231A1917%22 text-anchor=%22middle%22>P</text></svg>">
 <link rel="sitemap" href="/sitemap.xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
-<script type="application/ld+json">{"@context":"https://schema.org","@type":"Organization","name":"PAFFO","url":"https://paffo.ru/","description":"Luxury outerwear and accessories from the atelier."}</script>
+<link rel="preload" as="image" href="img/hero.webp">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=Lora:ital,wght@0,400;0,500;1,400&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"ClothingStore","name":"PAFFO","url":"https://paffo.ru/","email":"hello@paffo.ru","image":"https://paffo.ru/img/og-image.jpg","description":"Ателье верхней одежды: пальто из итальянской шерсти, кашемир, кожа. Пошив по меркам с двумя примерками.","priceRange":"18000-148000 RUB","openingHours":"Tu-Sa 10:00-18:00"}</script>
 <style>
 :root{
-  --ink:#1A1917; --ink-2:#26241F; --ivory:#F4F0E8; --ivory-dim:#B9B2A4;
-  --brass:#A67C3D; --oxblood:#5C1F2E;
+  --ink:#141311; --ink-2:#1C1B18; --ink-3:#232019; --ivory:#F4F0E8; --ivory-dim:#B4AC9C;
+  --brass:#B4863F; --brass-soft:#D8B27A; --oxblood:#5C1F2E;
   --font-d:"Cormorant Garamond",Georgia,serif;
   --font-b:"Lora",Georgia,serif;
   --font-m:"JetBrains Mono",ui-monospace,monospace;
-  --bg:var(--ink); --fg:var(--ivory); --muted:var(--ivory-dim); --accent:var(--brass);
-  --muted-lt:#6F6757; --accent-lt:#8A642A; --cap-fg:#F4F0E8; --cap-dim:#C9BFA9;
-  --line:color-mix(in srgb,var(--fg) 14%,transparent);
+  --bg:var(--ink); --bg-2:var(--ink-2); --fg:var(--ivory); --muted:var(--ivory-dim); --accent:var(--brass);
+  --line:color-mix(in srgb,var(--fg) 13%,transparent);
+  --line-strong:color-mix(in srgb,var(--fg) 26%,transparent);
+  --maxw:1320px;
+  --s-1:8px; --s-2:16px; --s-3:24px; --s-4:40px; --s-5:64px; --s-6:96px; --s-7:136px;
+  --pad:clamp(20px,5vw,72px);
+  --ease:cubic-bezier(.22,.61,.36,1);
 }
-[data-theme="light"]{ --bg:var(--ivory); --fg:var(--ink); --muted:var(--muted-lt); --accent:var(--accent-lt); --line:color-mix(in srgb,var(--fg) 14%,transparent); }
+[data-theme="light"]{
+  --bg:#F6F2EA; --bg-2:#EDE7DB; --fg:#1A1917; --muted:#6B6355; --accent:#8A6224;
+  --line:color-mix(in srgb,var(--fg) 12%,transparent);
+  --line-strong:color-mix(in srgb,var(--fg) 24%,transparent);
+}
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-html{scroll-behavior:smooth;scroll-padding-top:84px}
-body{font-family:var(--font-b);background:var(--bg);color:var(--fg);line-height:1.65;transition:background .3s,color .3s}
+html{scroll-behavior:smooth;scroll-padding-top:96px;-webkit-text-size-adjust:100%}
+body{font-family:var(--font-b);background:var(--bg);color:var(--fg);line-height:1.7;font-size:17px;overflow-x:hidden;transition:background .4s var(--ease),color .4s var(--ease)}
 img{display:block;max-width:100%;height:auto}
 a{color:inherit;text-decoration:none}
 button{font-family:inherit;cursor:pointer;border:0;background:none;color:inherit}
 :focus-visible{outline:2px solid var(--accent);outline-offset:3px;border-radius:2px}
+::selection{background:var(--accent);color:var(--bg)}
 
-.mono{font-family:var(--font-m);font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent)}
+.skip{position:fixed;top:12px;left:12px;z-index:90;transform:translateY(-200%);transition:transform .2s var(--ease)}
+.skip:focus-visible{transform:none}
+.mono{font-family:var(--font-m);font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent)}
+.wrap{max-width:var(--maxw);margin:0 auto;padding-inline:var(--pad)}
+.section{padding-block:clamp(var(--s-6),11vw,var(--s-7))}
+.section--alt{background:var(--bg-2)}
+.section--tight{padding-block:clamp(var(--s-5),8vw,var(--s-6))}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(14px);transition:opacity .7s var(--ease),transform .7s var(--ease)}
+.rv.in{opacity:1;transform:none}
+.rv:nth-child(2){transition-delay:.06s}.rv:nth-child(3){transition-delay:.12s}
+.rv:nth-child(4){transition-delay:.18s}.rv:nth-child(5){transition-delay:.24s}
 
 /* nav */
-.nav{position:fixed;top:0;left:0;right:0;z-index:40;display:flex;align-items:center;justify-content:space-between;padding:18px 5vw;border-bottom:1px solid var(--line);background:color-mix(in srgb,var(--bg) 86%,transparent);backdrop-filter:blur(12px)}
-.logo{font-family:var(--font-d);font-size:26px;letter-spacing:.22em;font-weight:600}
+.nav{position:fixed;top:0;left:0;right:0;z-index:60;border-bottom:1px solid transparent;transition:background .3s var(--ease),border-color .3s var(--ease)}
+.nav.stuck{background:color-mix(in srgb,var(--bg) 88%,transparent);backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+.nav-in{display:flex;align-items:center;justify-content:space-between;gap:var(--s-3);max-width:var(--maxw);margin:0 auto;padding:16px var(--pad)}
+.logo{font-family:var(--font-d);font-size:26px;letter-spacing:.26em;font-weight:600;line-height:1}
 .logo i{font-style:normal;color:var(--accent)}
 .menu{display:flex;gap:26px;list-style:none}
 .menu a{font-family:var(--font-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);transition:color .2s}
 .menu a:hover{color:var(--fg)}
-.nav-actions{display:flex;gap:10px}
-.theme-btn{width:40px;height:40px;border:1px solid var(--line);border-radius:8px;font-size:16px;transition:background .2s}
-.theme-btn:hover{background:var(--line)}
-.burger{display:none;width:40px;height:40px;border:1px solid var(--line);border-radius:8px;font-size:18px}
-.mobile-panel{position:fixed;inset:0;z-index:50;background:var(--bg);display:none;flex-direction:column;gap:8px;padding:24px}
+.nav-actions{display:flex;align-items:center;gap:var(--s-1)}
+.icon-btn{min-width:40px;height:40px;padding:0 10px;border:1px solid var(--line);border-radius:999px;font-family:var(--font-m);font-size:11px;letter-spacing:.1em;display:grid;place-items:center;transition:border-color .2s,background .2s}
+.icon-btn:hover{border-color:var(--line-strong);background:color-mix(in srgb,var(--fg) 5%,transparent)}
+.nav .btn-sm{display:inline-flex}
+.btn-sm{padding:11px 18px;border-radius:999px;background:var(--accent);color:#141311;font-family:var(--font-m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;transition:filter .2s,transform .2s}
+.btn-sm:hover{filter:brightness(1.08);transform:translateY(-1px)}
+.burger{display:none}
+.mobile-panel{position:fixed;inset:0;z-index:70;background:var(--bg);display:none;flex-direction:column;padding:var(--s-3) var(--pad) var(--s-5);overflow-y:auto}
 .mobile-panel.open{display:flex}
-.mobile-panel a{font-family:var(--font-d);font-size:34px;padding:10px 4px;border-bottom:1px solid var(--line)}
+.mobile-top{display:flex;justify-content:space-between;align-items:center;margin-bottom:var(--s-4)}
+.mobile-panel nav a{font-family:var(--font-d);font-size:clamp(30px,9vw,40px);padding:14px 0;border-bottom:1px solid var(--line);display:block}
+.mobile-panel .btn{margin-top:var(--s-4);justify-content:center}
+
+/* buttons */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:16px 30px;border-radius:2px;font-family:var(--font-m);font-size:12px;letter-spacing:.14em;text-transform:uppercase;transition:transform .2s var(--ease),background .25s,border-color .25s,color .25s}
+.btn:hover{transform:translateY(-2px)}
+.btn-solid{background:var(--accent);color:#141311}
+.btn-solid:hover{background:var(--brass-soft)}
+.btn-ghost{border:1px solid var(--line-strong);color:var(--fg)}
+.btn-ghost:hover{border-color:var(--accent);color:var(--accent)}
+.link-arrow{font-family:var(--font-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--accent);display:inline-flex;gap:8px;align-items:center}
+.link-arrow span{transition:transform .25s var(--ease)}
+.link-arrow:hover span{transform:translateX(5px)}
 
 /* hero */
-.hero{min-height:100vh;display:grid;grid-template-columns:1.1fr .9fr;align-items:center;gap:5vw;padding:130px 5vw 80px;max-width:1400px;margin:0 auto}
-.hero .eyebrow{margin-bottom:22px;display:flex;align-items:center;gap:14px}
-.hero .eyebrow::after{content:"";flex:1;max-width:120px;height:1px;background:var(--accent)}
-.hero h1{font-family:var(--font-d);font-weight:500;font-size:clamp(44px,6.5vw,92px);line-height:1.02;letter-spacing:.005em}
-.hero h1 em{font-style:italic;color:var(--accent)}
-.hero .sub{margin-top:24px;max-width:38ch;color:var(--muted);font-size:17px}
-.cta-row{display:flex;gap:14px;margin-top:36px;flex-wrap:wrap}
-.btn{padding:14px 28px;border-radius:2px;font-family:var(--font-m);font-size:12px;letter-spacing:.12em;text-transform:uppercase;transition:transform .15s,background .2s}
-.btn:hover{transform:translateY(-2px)}
-.btn-solid{background:var(--accent);color:var(--ink)}
-.btn-ghost{border:1px solid var(--line);color:var(--fg)}
+.hero{position:relative;padding-top:clamp(120px,15vh,168px);padding-bottom:var(--s-5)}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:clamp(28px,5vw,72px);align-items:center}
+.eyebrow{display:flex;align-items:center;gap:14px;margin-bottom:var(--s-3)}
+.eyebrow::after{content:"";flex:1;max-width:110px;height:1px;background:var(--accent);opacity:.6}
+h1{font-family:var(--font-d);font-weight:500;font-size:clamp(40px,5.2vw,74px);line-height:1.06;letter-spacing:.004em}
+h1 em{font-style:italic;color:var(--accent)}
+.hero p.sub{margin-top:var(--s-3);max-width:44ch;color:var(--muted);font-size:clamp(16px,1.4vw,19px)}
+.cta-row{display:flex;gap:12px;margin-top:var(--s-4);flex-wrap:wrap}
+.hero-facts{display:flex;flex-wrap:wrap;gap:var(--s-4);margin-top:var(--s-5);padding-top:var(--s-3);border-top:1px solid var(--line)}
+.hero-facts div b{display:block;font-family:var(--font-d);font-size:34px;font-weight:500;line-height:1.1}
+.hero-facts div span{font-family:var(--font-m);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
 .hero-fig{position:relative}
-.hero-fig img{aspect-ratio:4/5;object-fit:cover;border-radius:2px}
-.hero-fig .look{position:absolute;left:-14px;top:-14px;background:var(--accent);color:var(--ink);padding:8px 12px;font-family:var(--font-m);font-size:11px;letter-spacing:.1em}
-.hero-fig .stitch{position:absolute;bottom:-10px;right:-10px;width:52%;height:52%;border:1px solid var(--accent);pointer-events:none}
+.hero-fig img{aspect-ratio:4/5;object-fit:cover;width:100%;border-radius:2px}
+.hero-fig figcaption{position:absolute;left:0;bottom:0;background:var(--bg);padding:14px 18px;max-width:74%;border-top:1px solid var(--accent)}
+.hero-fig figcaption b{font-family:var(--font-d);font-size:20px;font-weight:500;display:block}
+.hero-fig figcaption span{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
 
-/* sections */
-.section{padding:110px 5vw;max-width:1400px;margin:0 auto}
-.section-head{display:flex;align-items:baseline;justify-content:space-between;gap:20px;margin-bottom:50px;border-bottom:1px solid var(--line);padding-bottom:18px}
-.section-head h2{font-family:var(--font-d);font-weight:500;font-size:clamp(30px,4vw,48px)}
-.section-head .idx{font-family:var(--font-m);font-size:12px;color:var(--muted);letter-spacing:.14em}
+/* marquee strip */
+.strip{border-block:1px solid var(--line);background:var(--bg-2);overflow:hidden}
+.strip-in{display:flex;gap:var(--s-5);padding:14px 0;width:max-content;animation:slide 38s linear infinite}
+.strip span{font-family:var(--font-m);font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--muted);white-space:nowrap}
+.strip span::before{content:"—";margin-right:var(--s-2);color:var(--accent)}
+@keyframes slide{from{transform:translateX(0)}to{transform:translateX(-50%)}}
 
-.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
-.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
-.card{position:relative;overflow:hidden}
-.card img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .4s}
-.card:hover img{transform:scale(1.03)}
-.card .cap{position:absolute;inset:auto 0 0 0;padding:34px 18px 16px;background:linear-gradient(to top,rgba(10,9,7,.82),transparent);color:var(--cap-fg)}
-.card .cap b{font-family:var(--font-d);font-size:22px;font-weight:500;display:block}
-.card .cap span{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--cap-dim)}
-.card .no{position:absolute;top:12px;left:12px;background:var(--bg);color:var(--fg);font-family:var(--font-m);font-size:10px;letter-spacing:.1em;padding:5px 8px}
+/* section head */
+.section-head{display:flex;align-items:flex-end;justify-content:space-between;gap:var(--s-3);margin-bottom:var(--s-5);padding-bottom:var(--s-2);border-bottom:1px solid var(--line)}
+.section-head h2{font-family:var(--font-d);font-weight:500;font-size:clamp(30px,4.2vw,52px);line-height:1.1}
+.section-head p{color:var(--muted);margin-top:var(--s-1);max-width:46ch;font-size:16px}
+.section-head .idx{font-family:var(--font-m);font-size:11px;letter-spacing:.16em;color:var(--muted);white-space:nowrap;padding-bottom:6px}
+
+/* values */
+.values{display:grid;grid-template-columns:repeat(4,1fr);gap:1px;background:var(--line)}
+.values article{background:var(--bg);padding:var(--s-4) var(--s-3)}
+.values .n{font-family:var(--font-m);font-size:11px;letter-spacing:.16em;color:var(--accent)}
+.values h3{font-family:var(--font-d);font-weight:500;font-size:26px;margin:var(--s-2) 0 6px;line-height:1.2}
+.values p{color:var(--muted);font-size:15px;line-height:1.6}
+
+/* cards */
+.grid3{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3)}
+.grid4{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3)}
+.card{position:relative;overflow:hidden;display:block}
+.card img{aspect-ratio:3/4;object-fit:cover;width:100%;transition:transform .8s var(--ease)}
+.card:hover img{transform:scale(1.04)}
+.card .no{position:absolute;top:14px;left:14px;background:color-mix(in srgb,var(--bg) 85%,transparent);backdrop-filter:blur(6px);font-family:var(--font-m);font-size:10px;letter-spacing:.12em;padding:6px 9px}
+.card .cap{position:absolute;inset:auto 0 0 0;padding:56px 18px 18px;background:linear-gradient(to top,rgba(10,9,7,.88),rgba(10,9,7,.35) 55%,transparent);color:#F4F0E8}
+.card .cap b{font-family:var(--font-d);font-size:24px;font-weight:500;display:block;line-height:1.2}
+.card .cap span{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:#C9BFA9}
+
+/* lookbook rail */
+.rail{display:grid;grid-template-columns:repeat(5,1fr);gap:var(--s-2)}
+.rail .card img{aspect-ratio:2/3}
 
 /* products */
-.prod img{aspect-ratio:1;object-fit:cover}
-.prod .nm{display:flex;justify-content:space-between;margin-top:12px;font-size:15px}
-.prod .nm i{font-style:normal;font-family:var(--font-m);font-size:11px;color:var(--muted)}
-.prod .pr{font-family:var(--font-m);font-size:12px;color:var(--accent);margin-top:2px}
+.prod{display:flex;flex-direction:column}
+.prod .ph{position:relative;overflow:hidden}
+.prod img{aspect-ratio:4/5;object-fit:cover;width:100%;transition:transform .8s var(--ease)}
+.prod:hover img{transform:scale(1.04)}
+.prod .body{padding-top:var(--s-2);display:flex;flex-direction:column;gap:4px;flex:1}
+.prod h3{font-family:var(--font-d);font-weight:500;font-size:23px;line-height:1.2}
+.prod .meta{font-size:14px;color:var(--muted);line-height:1.5}
+.prod .price{font-family:var(--font-m);font-size:13px;color:var(--accent);margin-top:auto;padding-top:var(--s-2)}
+.prod .order{margin-top:var(--s-2);padding:12px 0;border-top:1px solid var(--line);font-family:var(--font-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);display:flex;justify-content:space-between;transition:color .2s}
+.prod:hover .order{color:var(--accent)}
 
-/* craft */
-.craft{display:grid;grid-template-columns:1fr 1fr;gap:5vw;align-items:center}
-.craft img{aspect-ratio:3/2;object-fit:cover}
-.craft h2{font-family:var(--font-d);font-weight:500;font-size:clamp(30px,4vw,44px);margin:16px 0}
-.craft p{color:var(--muted);max-width:46ch}
+/* split / atelier */
+.split{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,80px);align-items:center}
+.split img{aspect-ratio:4/3;object-fit:cover;width:100%}
+.split h2{font-family:var(--font-d);font-weight:500;font-size:clamp(28px,3.8vw,46px);line-height:1.15;margin:var(--s-2) 0 var(--s-3)}
+.split p{color:var(--muted);max-width:48ch}
+.split p + p{margin-top:var(--s-2)}
 
-/* quote */
-.quote{text-align:center;padding:120px 5vw;max-width:900px;margin:0 auto}
-.quote blockquote{font-family:var(--font-d);font-size:clamp(24px,3.4vw,40px);font-style:italic;line-height:1.3}
-.quote cite{display:block;margin-top:22px;font-family:var(--font-m);font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);font-style:normal}
+/* process */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:var(--s-3);counter-reset:step}
+.steps article{padding-top:var(--s-3);border-top:1px solid var(--line-strong)}
+.steps .n{font-family:var(--font-m);font-size:11px;letter-spacing:.16em;color:var(--accent)}
+.steps h3{font-family:var(--font-d);font-weight:500;font-size:25px;margin:10px 0 6px}
+.steps p{color:var(--muted);font-size:15px;line-height:1.6}
 
-/* signup */
-.signup{display:grid;grid-template-columns:1fr 1fr;gap:4vw;align-items:center;border:1px solid var(--line);padding:5vw}
-.signup h2{font-family:var(--font-d);font-weight:500;font-size:clamp(28px,3.4vw,42px)}
-.signup p{color:var(--muted);margin-top:12px}
-.signup form{margin-top:24px;display:grid;gap:10px}
-.signup label{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
-.signup input{padding:14px 16px;border:1px solid var(--line);border-radius:2px;background:transparent;color:var(--fg);font-family:var(--font-b);font-size:15px}
-.signup input:focus{outline:2px solid var(--accent);outline-offset:0}
+/* testimonials */
+.quotes{display:grid;grid-template-columns:repeat(3,1fr);gap:var(--s-3)}
+.quotes figure{border:1px solid var(--line);padding:var(--s-4) var(--s-3);display:flex;flex-direction:column;gap:var(--s-3);background:var(--bg)}
+.quotes blockquote{font-family:var(--font-d);font-style:italic;font-size:23px;line-height:1.35}
+.quotes figcaption{font-family:var(--font-m);font-size:10px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin-top:auto}
+.stars{color:var(--accent);letter-spacing:.2em;font-size:12px}
 
-.grid5{display:grid;grid-template-columns:repeat(5,1fr);gap:16px}
+/* ledger + faq */
 .ledger{border-top:1px solid var(--line)}
-.ledger .row{display:grid;grid-template-columns:140px 1fr;gap:20px;padding:20px 0;border-bottom:1px solid var(--line);align-items:baseline}
-.ledger .row b{font-family:var(--font-b);font-weight:400;font-size:17px;max-width:60ch}
+.ledger .row{display:grid;grid-template-columns:180px 1fr;gap:var(--s-3);padding:18px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.ledger .row b{font-weight:400;font-size:17px;max-width:62ch}
+.faq{border-top:1px solid var(--line)}
+.faq details{border-bottom:1px solid var(--line)}
+.faq summary{list-style:none;cursor:pointer;padding:20px 0;display:flex;justify-content:space-between;gap:var(--s-3);align-items:center;font-family:var(--font-d);font-size:clamp(20px,2vw,25px);font-weight:500}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";font-family:var(--font-m);color:var(--accent);font-size:20px;transition:transform .3s var(--ease)}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq p{color:var(--muted);padding-bottom:22px;max-width:70ch}
+
+/* contact / form */
+.contact{display:grid;grid-template-columns:1fr 1fr;gap:clamp(28px,5vw,72px)}
+form{display:grid;gap:var(--s-2)}
+label{font-family:var(--font-m);font-size:10px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted)}
+input,textarea,select{width:100%;padding:15px 16px;border:1px solid var(--line-strong);border-radius:2px;background:transparent;color:var(--fg);font-family:var(--font-b);font-size:16px}
+textarea{min-height:104px;resize:vertical}
+input::placeholder,textarea::placeholder{color:color-mix(in srgb,var(--muted) 75%,transparent)}
+input:focus,textarea:focus,select:focus{outline:2px solid var(--accent);outline-offset:0;border-color:transparent}
+.field{display:grid;gap:6px}
+.form-note{font-size:13px;color:var(--muted)}
+.form-status{font-family:var(--font-m);font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--accent);min-height:18px}
+.contact-list{border-top:1px solid var(--line)}
+.contact-list .row{display:grid;grid-template-columns:120px 1fr;gap:var(--s-3);padding:16px 0;border-bottom:1px solid var(--line);align-items:baseline}
+.contact-list a{border-bottom:1px solid var(--line-strong)}
 
 /* footer */
+footer{border-top:1px solid var(--line);padding-block:var(--s-4);background:var(--bg-2)}
+.foot{display:flex;flex-wrap:wrap;gap:var(--s-2) var(--s-4);justify-content:space-between;align-items:center;font-family:var(--font-m);font-size:11px;letter-spacing:.08em;color:var(--muted)}
+.foot a:hover{color:var(--accent)}
 
-footer{border-top:1px solid var(--line);padding:44px 5vw}
-.foot{display:flex;flex-wrap:wrap;gap:18px;justify-content:space-between;align-items:center;max-width:1400px;margin:0 auto;font-family:var(--font-m);font-size:11px;letter-spacing:.08em;color:var(--muted)}
-.foot a{color:var(--accent)}
+/* sticky mobile cta */
+.sticky-cta{position:fixed;left:0;right:0;bottom:0;z-index:55;display:none;gap:10px;padding:10px 16px calc(10px + env(safe-area-inset-bottom));background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(14px);border-top:1px solid var(--line);transform:translateY(120%);transition:transform .35s var(--ease)}
+.sticky-cta.show{transform:none}
+.sticky-cta .btn{flex:1;justify-content:center;padding:14px 16px}
 
-@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}}
-@media (max-width:1100px){.grid5{grid-template-columns:repeat(3,1fr)}}
-@media (max-width:960px){
-  .menu{display:none}.burger{display:block}
-  .hero{grid-template-columns:1fr;padding-top:120px;gap:40px}
-  .hero-fig{max-width:520px}
-  .grid3,.grid4{grid-template-columns:repeat(2,1fr)}
-  .craft,.signup{grid-template-columns:1fr}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}html{scroll-behavior:auto}.rv{opacity:1;transform:none}}
+@media (max-width:1100px){
+  .values{grid-template-columns:repeat(2,1fr)}
+  .steps{grid-template-columns:repeat(2,1fr);gap:var(--s-4) var(--s-3)}
+  .quotes{grid-template-columns:1fr}
+  .quotes figure{padding:var(--s-3)}
 }
-@media (max-width:560px){.grid3,.grid4{grid-template-columns:1fr}}
+@media (max-width:960px){
+  .menu,.nav .btn-sm{display:none}
+  .burger{display:grid}
+  .hero-grid,.split,.contact{grid-template-columns:1fr}
+  .hero{padding-top:112px}
+  .hero-facts{gap:var(--s-3) var(--s-4);margin-top:var(--s-4)}
+  .split .split-media{order:-1}
+  .grid3,.grid4{grid-template-columns:repeat(2,1fr)}
+  .sticky-cta{display:flex}
+  body{padding-bottom:0}
+  .ledger .row,.contact-list .row{grid-template-columns:1fr;gap:4px;padding:14px 0}
+  /* lookbook becomes a snap rail */
+  .rail{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;gap:var(--s-2);margin-inline:calc(var(--pad) * -1);padding-inline:var(--pad);scrollbar-width:none}
+  .rail::-webkit-scrollbar{display:none}
+  .rail .card{flex:0 0 74%;scroll-snap-align:start}
+}
+@media (max-width:640px){
+  .grid3,.grid4{grid-template-columns:1fr}
+  .values{grid-template-columns:1fr}
+  .steps{grid-template-columns:1fr}
+  .rail .card{flex:0 0 82%}
+  .hero-fig figcaption{max-width:88%}
+}
 </style>
 </head>
-<body data-theme="dark">
+<body>
 
-<nav class="nav">
-  <div class="logo">PAFF<i>O</i></div>
-  <ul class="menu">
-    <li><a href="#collections">Collections</a></li>
-    <li><a href="#lookbook">Lookbook</a></li>
-    <li><a href="#products">Products</a></li>
-    <li><a href="#craft">Atelier</a></li>
-    <li><a href="#inner">Inner circle</a></li>
-  </ul>
-  <div class="nav-actions">
-    <button class="theme-btn" id="themeBtn" aria-label="Toggle theme">☾</button>
-    <button class="burger" id="burger" aria-label="Open menu" aria-expanded="false">☰</button>
-  </div>
-</nav>
+<a class="btn-sm skip" href="#request" data-ru="К форме заявки" data-en="Skip to request form">К форме заявки</a>
 
-<div class="mobile-panel" id="mobilePanel">
-  <a href="#collections">Collections</a>
-  <a href="#lookbook">Lookbook</a>
-  <a href="#products">Products</a>
-  <a href="#craft">Atelier</a>
-  <a href="#inner">Inner circle</a>
-</div>
-
-<header class="hero" id="top">
-  <div class="hero-copy">
-    <p class="eyebrow mono">Look №01 — Winter Elegance</p>
-    <h1>Wool coats,<br><em>cut for the city.</em></h1>
-    <p class="sub">Outerwear and accessories from the atelier. Cashmere you'll wear daily, leather that outlives fashion — no seasons, no noise.</p>
-    <div class="cta-row">
-      <a class="btn btn-solid" href="#collections">View the collection</a>
-      <a class="btn btn-ghost" href="#craft">Read the atelier</a>
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="logo" href="#top">PAFF<i>O</i></a>
+    <ul class="menu">
+      <li><a href="#collections" data-ru="Коллекции" data-en="Collections">Коллекции</a></li>
+      <li><a href="#lookbook" data-ru="Лукбук" data-en="Lookbook">Лукбук</a></li>
+      <li><a href="#shelf" data-ru="Изделия" data-en="Pieces">Изделия</a></li>
+      <li><a href="#process" data-ru="Как шьём" data-en="Process">Как шьём</a></li>
+      <li><a href="#atelier" data-ru="Ателье" data-en="Atelier">Ателье</a></li>
+      <li><a href="#faq" data-ru="Вопросы" data-en="FAQ">Вопросы</a></li>
+    </ul>
+    <div class="nav-actions">
+      <button class="icon-btn" id="langBtn" aria-label="Switch language">EN</button>
+      <button class="icon-btn" id="themeBtn" aria-label="Сменить тему">☾</button>
+      <a class="btn-sm" href="#request" data-ru="Записаться" data-en="Book a fitting">Записаться</a>
+      <button class="icon-btn burger" id="burger" aria-label="Меню" aria-expanded="false" aria-controls="mobilePanel">☰</button>
     </div>
   </div>
-  <figure class="hero-fig">
-    <span class="look mono">Look №01</span>
-    <img src="img/hero.webp" alt="A wool overcoat from the PAFFO atelier — look editorial" width="512" height="512">
-    <span class="stitch" aria-hidden="true"></span>
-  </figure>
 </header>
 
-<section class="section" id="collections">
-  <div class="section-head">
-    <h2>The collections</h2>
-    <span class="idx">01 — 03</span>
+<div class="mobile-panel" id="mobilePanel">
+  <div class="mobile-top">
+    <span class="logo">PAFF<i>O</i></span>
+    <button class="icon-btn" id="closePanel" aria-label="Закрыть меню">✕</button>
   </div>
-  <div class="grid3">
-    <figure class="card">
-      <span class="no mono">№01</span>
-      <img src="img/collections/winter-elegance.webp" alt="Winter Elegance collection — wool and cashmere" width="900" height="1100">
-      <figcaption class="cap"><b>Winter Elegance</b><span>Wool · Cashmere</span></figcaption>
+  <nav>
+    <a href="#collections" data-ru="Коллекции" data-en="Collections">Коллекции</a>
+    <a href="#lookbook" data-ru="Лукбук" data-en="Lookbook">Лукбук</a>
+    <a href="#shelf" data-ru="Изделия" data-en="Pieces">Изделия</a>
+    <a href="#process" data-ru="Как шьём" data-en="Process">Как шьём</a>
+    <a href="#atelier" data-ru="Ателье" data-en="Atelier">Ателье</a>
+    <a href="#faq" data-ru="Вопросы" data-en="FAQ">Вопросы</a>
+  </nav>
+  <a class="btn btn-solid" href="#request" data-ru="Записаться на примерку" data-en="Book a fitting">Записаться на примерку</a>
+</div>
+
+<main id="top">
+
+<section class="hero wrap">
+  <div class="hero-grid">
+    <div>
+      <p class="eyebrow mono" data-ru="Ателье верхней одежды · с 2014 года" data-en="Outerwear atelier · since 2014">Ателье верхней одежды · с 2014 года</p>
+      <h1 data-ru="Пальто из шерсти,<br><em>скроенное по вам.</em>" data-en="Wool coats,<br><em>cut to your measure.</em>">Пальто из шерсти,<br><em>скроенное по вам.</em></h1>
+      <p class="sub" data-ru="Итальянская шерсть 380 г, две примерки, один портной ведёт изделие от лекала до последнего стежка. Готово за 21 день — от 148 000 ₽." data-en="Italian wool 380g, two fittings, one tailor takes your piece from pattern to final stitch. Ready in 21 days — from €1,480.">Итальянская шерсть 380 г, две примерки, один портной ведёт изделие от лекала до последнего стежка. Готово за 21 день — от 148 000 ₽.</p>
+      <div class="cta-row">
+        <a class="btn btn-solid" href="#request" data-ru="Записаться на примерку" data-en="Book a fitting">Записаться на примерку</a>
+        <a class="btn btn-ghost" href="#collections" data-ru="Смотреть коллекции" data-en="View collections">Смотреть коллекции</a>
+      </div>
+      <div class="hero-facts">
+        <div><b>21</b><span data-ru="день на пошив" data-en="days to make">день на пошив</span></div>
+        <div><b>2</b><span data-ru="примерки" data-en="fittings">примерки</span></div>
+        <div><b>380<i style="font-style:normal;font-size:20px">г</i></b><span data-ru="итальянская шерсть" data-en="italian wool">итальянская шерсть</span></div>
+        <div><b>640+</b><span data-ru="изделий с 2014" data-en="pieces since 2014">изделий с 2014</span></div>
+      </div>
+    </div>
+    <figure class="hero-fig rv">
+      <img src="img/hero.webp" alt="Пальто PAFFO из верблюжьей шерсти — образ из ателье" width="512" height="512" fetchpriority="high">
+      <figcaption>
+        <b data-ru="Пальто «Зимняя элегантность»" data-en="The Winter Elegance coat">Пальто «Зимняя элегантность»</b>
+        <span data-ru="Шерсть · кашемир · 148 000 ₽" data-en="Wool · cashmere · €1,480">Шерсть · кашемир · 148 000 ₽</span>
+      </figcaption>
     </figure>
-    <figure class="card">
-      <span class="no mono">№02</span>
-      <img src="img/collections/urban-luxe.webp" alt="Urban Luxe collection — dark tailored outerwear" width="900" height="1100">
-      <figcaption class="cap"><b>Urban Luxe</b><span>Tailored · Dark</span></figcaption>
-    </figure>
-    <figure class="card">
-      <span class="no mono">№03</span>
-      <img src="img/collections/evening-opulence.webp" alt="Evening Opulence collection — silk and velvet evening wear" width="900" height="1100">
-      <figcaption class="cap"><b>Evening Opulence</b><span>Silk · Velvet</span></figcaption>
-    </figure>
+  </div>
+</section>
+
+<div class="strip" aria-hidden="true">
+  <div class="strip-in">
+    <span data-ru="Один портной на изделие" data-en="One tailor per piece">Один портной на изделие</span>
+    <span data-ru="Итальянская шерсть, один рулон на пальто" data-en="Italian wool, one bolt per coat">Итальянская шерсть, один рулон на пальто</span>
+    <span data-ru="Две примерки" data-en="Two fittings">Две примерки</span>
+    <span data-ru="Ремонт бесплатно навсегда" data-en="Free repairs, forever">Ремонт бесплатно навсегда</span>
+    <span data-ru="Один портной на изделие" data-en="One tailor per piece">Один портной на изделие</span>
+    <span data-ru="Итальянская шерсть, один рулон на пальто" data-en="Italian wool, one bolt per coat">Итальянская шерсть, один рулон на пальто</span>
+    <span data-ru="Две примерки" data-en="Two fittings">Две примерки</span>
+    <span data-ru="Ремонт бесплатно навсегда" data-en="Free repairs, forever">Ремонт бесплатно навсегда</span>
+  </div>
+</div>
+
+<section class="section section--tight wrap" id="why">
+  <div class="values">
+    <article class="rv">
+      <span class="n">01</span>
+      <h3 data-ru="Один портной" data-en="One tailor">Один портной</h3>
+      <p data-ru="Изделие ведёт один мастер: он снимает мерки, строит лекало и сам сшивает — без конвейера и передачи по цеху." data-en="One craftsman owns your piece: measures, drafts the pattern and sews it — no assembly line, no hand-offs.">Изделие ведёт один мастер: он снимает мерки, строит лекало и сам сшивает — без конвейера и передачи по цеху.</p>
+    </article>
+    <article class="rv">
+      <span class="n">02</span>
+      <h3 data-ru="Ткань из одного рулона" data-en="A single bolt">Ткань из одного рулона</h3>
+      <p data-ru="Шерсть 380 г из Биеллы. На пальто уходит один рулон — оттенок и плотность совпадают на всех деталях." data-en="380g wool from Biella. One bolt per coat, so shade and density match across every panel.">Шерсть 380 г из Биеллы. На пальто уходит один рулон — оттенок и плотность совпадают на всех деталях.</p>
+    </article>
+    <article class="rv">
+      <span class="n">03</span>
+      <h3 data-ru="Две примерки" data-en="Two fittings">Две примерки</h3>
+      <p data-ru="Первая — по смётке, вторая — перед финальной сборкой. Плечи подгоняются вручную до чистового шва." data-en="First on the basted shell, second before final assembly. Shoulders are fitted by hand before the finishing seam.">Первая — по смётке, вторая — перед финальной сборкой. Плечи подгоняются вручную до чистового шва.</p>
+    </article>
+    <article class="rv">
+      <span class="n">04</span>
+      <h3 data-ru="Ремонт навсегда" data-en="Repairs forever">Ремонт навсегда</h3>
+      <p data-ru="Пуговицы, подкладка, посадка после смены веса — чиним бесплатно, сколько бы лет ни прошло." data-en="Buttons, lining, a re-fit after your weight changes — repaired free, however many years later.">Пуговицы, подкладка, посадка после смены веса — чиним бесплатно, сколько бы лет ни прошло.</p>
+    </article>
+  </div>
+</section>
+
+<section class="section section--alt" id="collections">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="mono" data-ru="Коллекции" data-en="Collections">Коллекции</p>
+        <h2 data-ru="Три линии, без сезонов" data-en="Three lines, no seasons">Три линии, без сезонов</h2>
+        <p data-ru="Мы не переобуваемся каждые полгода: линии живут годами, меняются только ткани." data-en="We don't reinvent every six months: the lines live for years, only the fabrics change.">Мы не переобуваемся каждые полгода: линии живут годами, меняются только ткани.</p>
+      </div>
+      <span class="idx">01 — 03</span>
+    </div>
+    <div class="grid3">
+      <a class="card rv" href="#request">
+        <span class="no mono">№01</span>
+        <img src="img/collections/winter-elegance.webp" alt="Коллекция «Зимняя элегантность» — шерсть и кашемир" width="512" height="512" loading="lazy">
+        <span class="cap"><b data-ru="Зимняя элегантность" data-en="Winter Elegance">Зимняя элегантность</b><span data-ru="Шерсть · кашемир" data-en="Wool · cashmere">Шерсть · кашемир</span></span>
+      </a>
+      <a class="card rv" href="#request">
+        <span class="no mono">№02</span>
+        <img src="img/collections/urban-luxe.webp" alt="Коллекция «Городской люкс» — тёмная пальтовая группа" width="512" height="512" loading="lazy">
+        <span class="cap"><b data-ru="Городской люкс" data-en="Urban Luxe">Городской люкс</b><span data-ru="Костюмная группа · тёмная" data-en="Tailored · dark">Костюмная группа · тёмная</span></span>
+      </a>
+      <a class="card rv" href="#request">
+        <span class="no mono">№03</span>
+        <img src="img/collections/evening-opulence.webp" alt="Коллекция «Вечерняя роскошь» — шёлк и бархат" width="512" height="512" loading="lazy">
+        <span class="cap"><b data-ru="Вечерняя роскошь" data-en="Evening Opulence">Вечерняя роскошь</b><span data-ru="Шёлк · бархат" data-en="Silk · velvet">Шёлк · бархат</span></span>
+      </a>
+    </div>
   </div>
 </section>
 
 <section class="section" id="lookbook">
-  <div class="section-head">
-    <h2>The lookbook</h2>
-    <span class="idx">Look №01 — 05</span>
-  </div>
-  <div class="grid5">
-    <figure class="card"><span class="no mono">№01</span><img src="img/lookbook/look-01.webp" alt="Look 01 — wool overcoat, studio editorial" width="512" height="512"><figcaption class="cap"><b>Look №01</b><span>Overcoat — studio</span></figcaption></figure>
-    <figure class="card"><span class="no mono">№02</span><img src="img/collections/urban-luxe.webp" alt="Look 02 — dark tailored overcoat, city" width="512" height="512"><figcaption class="cap"><b>Look №02</b><span>Tailored — city</span></figcaption></figure>
-    <figure class="card"><span class="no mono">№03</span><img src="img/collections/evening-opulence.webp" alt="Look 03 — velvet gown, evening" width="512" height="512"><figcaption class="cap"><b>Look №03</b><span>Velvet — evening</span></figcaption></figure>
-    <figure class="card"><span class="no mono">№04</span><img src="img/products/wool-coat.webp" alt="Look 04 — herringbone wool coat, fabric detail" width="512" height="512"><figcaption class="cap"><b>Look №04</b><span>Wool — fabric</span></figcaption></figure>
-    <figure class="card"><span class="no mono">№05</span><img src="img/products/cashmere-scarf.webp" alt="Look 05 — cashmere scarf, accessory detail" width="512" height="512"><figcaption class="cap"><b>Look №05</b><span>Cashmere — detail</span></figcaption></figure>
-  </div>
-</section>
-
-<section class="section" id="products">
-  <div class="section-head">
-    <h2>From the shelf</h2>
-    <span class="idx">Autumn — Winter</span>
-  </div>
-  <div class="grid4">
-    <figure class="card prod">
-      <span class="no mono">P01</span>
-      <img src="img/products/cashmere-scarf.webp" alt="Cashmere scarf in warm ivory" width="800" height="800">
-      <figcaption class="nm"><span>Cashmere Scarf</span><i>№01</i></figcaption>
-      <p class="pr">€ 240</p>
-    </figure>
-    <figure class="card prod">
-      <span class="no mono">P02</span>
-      <img src="img/products/wool-coat.webp" alt="Wool coat in deep charcoal" width="800" height="800">
-      <figcaption class="nm"><span>Wool Coat</span><i>№02</i></figcaption>
-      <p class="pr">€ 1 480</p>
-    </figure>
-    <figure class="card prod">
-      <span class="no mono">P03</span>
-      <img src="img/products/leather-gloves.webp" alt="Leather gloves in aged brass tone" width="800" height="800">
-      <figcaption class="nm"><span>Leather Gloves</span><i>№03</i></figcaption>
-      <p class="pr">€ 320</p>
-    </figure>
-    <figure class="card prod">
-      <span class="no mono">P04</span>
-      <img src="img/products/silk-belt.webp" alt="Silk belt in deep oxblood" width="800" height="800">
-      <figcaption class="nm"><span>Silk Belt</span><i>№04</i></figcaption>
-      <p class="pr">€ 180</p>
-    </figure>
-  </div>
-</section>
-
-<section class="section craft" id="craft">
-  <img src="img/craftsmanship/atelier.webp" alt="Inside the PAFFO atelier — a tailor's workbench" width="512" height="512">
-  <div>
-    <p class="mono">The atelier — ligne 02</p>
-    <h2>Made by hand,<br>measured twice.</h2>
-    <p>Every coat is cut from a single bolt, basted, fitted and sewn by one tailor. We do not chase seasons — we make pieces that outlive them.</p>
-    <div class="cta-row">
-      <a class="btn btn-ghost" href="#inner">Join the inner circle</a>
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="mono" data-ru="Лукбук" data-en="Lookbook">Лукбук</p>
+        <h2 data-ru="Как это носят" data-en="How it is worn">Как это носят</h2>
+      </div>
+      <span class="idx" data-ru="Образ №01 — 05" data-en="Look №01 — 05">Образ №01 — 05</span>
+    </div>
+    <div class="rail">
+      <figure class="card rv"><span class="no mono">№01</span><img src="img/lookbook/look-01.webp" alt="Образ 01 — пальто, студийная съёмка" width="512" height="512" loading="lazy"><figcaption class="cap"><b data-ru="Образ №01" data-en="Look №01">Образ №01</b><span data-ru="Пальто · студия" data-en="Overcoat · studio">Пальто · студия</span></figcaption></figure>
+      <figure class="card rv"><span class="no mono">№02</span><img src="img/collections/urban-luxe.webp" alt="Образ 02 — тёмное пальто в городе" width="512" height="512" loading="lazy"><figcaption class="cap"><b data-ru="Образ №02" data-en="Look №02">Образ №02</b><span data-ru="Костюм · город" data-en="Tailored · city">Костюм · город</span></figcaption></figure>
+      <figure class="card rv"><span class="no mono">№03</span><img src="img/collections/evening-opulence.webp" alt="Образ 03 — вечернее бархатное платье" width="512" height="512" loading="lazy"><figcaption class="cap"><b data-ru="Образ №03" data-en="Look №03">Образ №03</b><span data-ru="Бархат · вечер" data-en="Velvet · evening">Бархат · вечер</span></figcaption></figure>
+      <figure class="card rv"><span class="no mono">№04</span><img src="img/products/wool-coat.webp" alt="Образ 04 — фактура шерсти ёлочкой" width="512" height="512" loading="lazy"><figcaption class="cap"><b data-ru="Образ №04" data-en="Look №04">Образ №04</b><span data-ru="Шерсть · фактура" data-en="Wool · fabric">Шерсть · фактура</span></figcaption></figure>
+      <figure class="card rv"><span class="no mono">№05</span><img src="img/products/cashmere-scarf.webp" alt="Образ 05 — кашемировый шарф, деталь" width="512" height="512" loading="lazy"><figcaption class="cap"><b data-ru="Образ №05" data-en="Look №05">Образ №05</b><span data-ru="Кашемир · деталь" data-en="Cashmere · detail">Кашемир · деталь</span></figcaption></figure>
     </div>
   </div>
 </section>
 
-<section class="section" id="details">
+<section class="section section--alt" id="shelf">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="mono" data-ru="Изделия" data-en="Pieces">Изделия</p>
+        <h2 data-ru="С полки ателье" data-en="From the atelier shelf">С полки ателье</h2>
+        <p data-ru="Цена указана за изделие по вашим меркам. Аксессуары — готовые размеры." data-en="Prices are for a made-to-measure piece. Accessories come in ready sizes.">Цена указана за изделие по вашим меркам. Аксессуары — готовые размеры.</p>
+      </div>
+      <span class="idx" data-ru="Осень — зима" data-en="Autumn — Winter">Осень — зима</span>
+    </div>
+    <div class="grid4">
+      <a class="prod rv" href="#request" data-item="Пальто из шерсти">
+        <div class="ph"><img src="img/products/wool-coat.webp" alt="Пальто из шерсти цвета угля" width="512" height="512" loading="lazy"></div>
+        <div class="body">
+          <h3 data-ru="Пальто из шерсти" data-en="Wool coat">Пальто из шерсти</h3>
+          <span class="meta" data-ru="Итальянская шерсть 380 г · по меркам · 21 день" data-en="Italian wool 380g · made to measure · 21 days">Итальянская шерсть 380 г · по меркам · 21 день</span>
+          <span class="price" data-ru="от 148 000 ₽" data-en="from €1,480">от 148 000 ₽</span>
+          <span class="order"><span data-ru="Заказать" data-en="Order">Заказать</span><span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="prod rv" href="#request" data-item="Кашемировый шарф">
+        <div class="ph"><img src="img/products/cashmere-scarf.webp" alt="Кашемировый шарф тёплого оттенка слоновой кости" width="512" height="512" loading="lazy"></div>
+        <div class="body">
+          <h3 data-ru="Кашемировый шарф" data-en="Cashmere scarf">Кашемировый шарф</h3>
+          <span class="meta" data-ru="Кашемир 100% · 190 × 32 см · 6 оттенков" data-en="100% cashmere · 190 × 32 cm · 6 shades">Кашемир 100% · 190 × 32 см · 6 оттенков</span>
+          <span class="price" data-ru="24 000 ₽" data-en="€240">24 000 ₽</span>
+          <span class="order"><span data-ru="Заказать" data-en="Order">Заказать</span><span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="prod rv" href="#request" data-item="Кожаные перчатки">
+        <div class="ph"><img src="img/products/leather-gloves.webp" alt="Кожаные перчатки с кашемировой подкладкой" width="512" height="512" loading="lazy"></div>
+        <div class="body">
+          <h3 data-ru="Кожаные перчатки" data-en="Leather gloves">Кожаные перчатки</h3>
+          <span class="meta" data-ru="Ягнёнок · кашемировая подкладка · размеры 7—9,5" data-en="Lambskin · cashmere lining · sizes 7—9.5">Ягнёнок · кашемировая подкладка · размеры 7—9,5</span>
+          <span class="price" data-ru="32 000 ₽" data-en="€320">32 000 ₽</span>
+          <span class="order"><span data-ru="Заказать" data-en="Order">Заказать</span><span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+      <a class="prod rv" href="#request" data-item="Шёлковый пояс">
+        <div class="ph"><img src="img/products/silk-belt.webp" alt="Шёлковый пояс глубокого винного оттенка" width="512" height="512" loading="lazy"></div>
+        <div class="body">
+          <h3 data-ru="Шёлковый пояс" data-en="Silk belt">Шёлковый пояс</h3>
+          <span class="meta" data-ru="Шёлк-твил · ручная закрепка · один размер" data-en="Silk twill · hand-tacked · one size">Шёлк-твил · ручная закрепка · один размер</span>
+          <span class="price" data-ru="18 000 ₽" data-en="€180">18 000 ₽</span>
+          <span class="order"><span data-ru="Заказать" data-en="Order">Заказать</span><span aria-hidden="true">→</span></span>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="process">
   <div class="section-head">
-    <h2>The details</h2>
-    <span class="idx">Specs</span>
-  </div>
-  <div class="ledger">
-    <div class="row"><span class="mono">Fabric</span><b>Italian wool 380g — single origin, one bolt per coat</b></div>
-    <div class="row"><span class="mono">Fit</span><b>Basted and fitted twice. Shoulders basted by hand before the first fitting</b></div>
-    <div class="row"><span class="mono">Care</span><b>Dry clean only. Brush after wear; air once a season</b></div>
-    <div class="row"><span class="mono">Delivery</span><b>7 days worldwide. Returns accepted within 30 days</b></div>
-  </div>
-</section>
-
-<section class="quote" id="about">
-  <blockquote>“The coat feels heavier than it looks — in a good way. You can tell someone measured twice.”</blockquote>
-  <cite>— Client, Winter Elegance, 2025</cite>
-</section>
-
-<section class="section" id="inner">
-  <div class="signup">
     <div>
-      <p class="mono">The inner circle</p>
-      <h2>One letter a season.<br>Nothing more.</h2>
-      <p>A single letter before each collection: what's cut, what's waiting, what's gone. No weekly noise.</p>
+      <p class="mono" data-ru="Процесс" data-en="Process">Процесс</p>
+      <h2 data-ru="От заявки до пальто — 21 день" data-en="From request to coat — 21 days">От заявки до пальто — 21 день</h2>
     </div>
-    <form id="signupForm">
-      <label for="email">Email</label>
-      <input type="email" id="email" name="email" placeholder="you@example.com" required>
-      <button class="btn btn-solid" type="submit">Join the circle</button>
-    </form>
+    <span class="idx" data-ru="4 шага" data-en="4 steps">4 шага</span>
+  </div>
+  <div class="steps">
+    <article class="rv"><span class="n" data-ru="Шаг 01" data-en="Step 01">Шаг 01</span><h3 data-ru="Заявка" data-en="Request">Заявка</h3><p data-ru="Оставляете форму — отвечаем в тот же день и подбираем время визита." data-en="You send the form — we reply the same day and pick a time for your visit.">Оставляете форму — отвечаем в тот же день и подбираем время визита.</p></article>
+    <article class="rv"><span class="n" data-ru="Шаг 02" data-en="Step 02">Шаг 02</span><h3 data-ru="Мерки и ткань" data-en="Measurements">Мерки и ткань</h3><p data-ru="Час в ателье: 18 мерок, выбор шерсти, подкладки и пуговиц. Без предоплаты." data-en="An hour at the atelier: 18 measurements, choice of wool, lining and buttons. No deposit.">Час в ателье: 18 мерок, выбор шерсти, подкладки и пуговиц. Без предоплаты.</p></article>
+    <article class="rv"><span class="n" data-ru="Шаг 03" data-en="Step 03">Шаг 03</span><h3 data-ru="Примерки" data-en="Fittings">Примерки</h3><p data-ru="Через 10 дней — примерка по смётке, ещё через неделю — контрольная перед сборкой." data-en="Day 10 — the basted fitting; a week later, the control fitting before assembly.">Через 10 дней — примерка по смётке, ещё через неделю — контрольная перед сборкой.</p></article>
+    <article class="rv"><span class="n" data-ru="Шаг 04" data-en="Step 04">Шаг 04</span><h3 data-ru="Выдача" data-en="Handover">Выдача</h3><p data-ru="Забираете в ателье или отправляем курьером. Дальше — бесплатный ремонт навсегда." data-en="Collect at the atelier or we ship it. After that — free repairs, forever.">Забираете в ателье или отправляем курьером. Дальше — бесплатный ремонт навсегда.</p></article>
   </div>
 </section>
 
-<section class="section" id="contact">
-  <div class="section-head">
-    <h2>Contact</h2>
-    <span class="idx">Atelier</span>
-  </div>
-  <div class="ledger">
-    <div class="row"><span class="mono">Studio</span><b>PAFFO — 12 Rue du Faubourg, Paris</b></div>
-    <div class="row"><span class="mono">Email</span><b><a href="mailto:hello@paffo.ru">hello@paffo.ru</a></b></div>
-    <div class="row"><span class="mono">Hours</span><b>Tuesday — Saturday, 10:00 to 18:00</b></div>
+<section class="section section--alt" id="atelier">
+  <div class="wrap split">
+    <div class="split-media rv"><img src="img/craftsmanship/atelier.webp" alt="В ателье PAFFO — работа за швейной машиной" width="512" height="512" loading="lazy"></div>
+    <div class="rv">
+      <p class="mono" data-ru="Ателье — линия 02" data-en="The atelier — ligne 02">Ателье — линия 02</p>
+      <h2 data-ru="Сшито руками,<br>отмерено дважды." data-en="Made by hand,<br>measured twice.">Сшито руками,<br>отмерено дважды.</h2>
+      <p data-ru="Мастерская на 6 человек. Каждое пальто кроится из одного рулона, смётывается, подгоняется и дошивается одним портным — мы не гонимся за сезонами и делаем вещи, которые их переживут." data-en="A six-person workshop. Every coat is cut from a single bolt, basted, fitted and finished by one tailor — we don't chase seasons, we make pieces that outlive them.">Мастерская на 6 человек. Каждое пальто кроится из одного рулона, смётывается, подгоняется и дошивается одним портным — мы не гонимся за сезонами и делаем вещи, которые их переживут.</p>
+      <p data-ru="За 11 лет мы выпустили больше 640 изделий и ни одно не отправили в переделку на сторону." data-en="In 11 years we have made over 640 pieces and never outsourced a single alteration.">За 11 лет мы выпустили больше 640 изделий и ни одно не отправили в переделку на сторону.</p>
+      <div class="cta-row"><a class="btn btn-ghost" href="#request" data-ru="Прийти на примерку" data-en="Come for a fitting">Прийти на примерку</a></div>
+    </div>
   </div>
 </section>
+
+<section class="section wrap" id="reviews">
+  <div class="section-head">
+    <div>
+      <p class="mono" data-ru="Отзывы" data-en="Reviews">Отзывы</p>
+      <h2 data-ru="Что говорят клиенты" data-en="What clients say">Что говорят клиенты</h2>
+    </div>
+    <span class="idx" data-ru="640+ изделий с 2014" data-en="640+ pieces since 2014">640+ изделий с 2014</span>
+  </div>
+  <div class="quotes">
+    <figure class="rv">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <blockquote data-ru="«Пальто тяжелее, чем кажется — в хорошем смысле. Сразу видно, что кто-то отмерил дважды.»" data-en="“The coat feels heavier than it looks — in a good way. You can tell someone measured twice.”">«Пальто тяжелее, чем кажется — в хорошем смысле. Сразу видно, что кто-то отмерил дважды.»</blockquote>
+      <figcaption data-ru="Анна К. · «Зимняя элегантность» · 2025" data-en="Anna K. · Winter Elegance · 2025">Анна К. · «Зимняя элегантность» · 2025</figcaption>
+    </figure>
+    <figure class="rv">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <blockquote data-ru="«Носил три зимы каждый день. Отдал на профилактику — перешили подкладку и не взяли ни рубля.»" data-en="“Worn every day for three winters. Brought it in for a service — they replaced the lining and charged nothing.”">«Носил три зимы каждый день. Отдал на профилактику — перешили подкладку и не взяли ни рубля.»</blockquote>
+      <figcaption data-ru="Дмитрий С. · «Городской люкс» · 2022" data-en="Dmitry S. · Urban Luxe · 2022">Дмитрий С. · «Городской люкс» · 2022</figcaption>
+    </figure>
+    <figure class="rv">
+      <div class="stars" aria-hidden="true">★★★★★</div>
+      <blockquote data-ru="«Плечи сидят так, как не сидели ни в одном магазинном пальто. Ради этого стоило ждать три недели.»" data-en="“The shoulders sit like no off-the-rack coat ever did. Worth the three-week wait.”">«Плечи сидят так, как не сидели ни в одном магазинном пальто. Ради этого стоило ждать три недели.»</blockquote>
+      <figcaption data-ru="Марина В. · пальто по меркам · 2024" data-en="Marina V. · made to measure · 2024">Марина В. · пальто по меркам · 2024</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section class="section section--alt" id="faq">
+  <div class="wrap">
+    <div class="section-head">
+      <div>
+        <p class="mono" data-ru="Вопросы" data-en="FAQ">Вопросы</p>
+        <h2 data-ru="Что обычно спрашивают" data-en="What people usually ask">Что обычно спрашивают</h2>
+      </div>
+      <span class="idx" data-ru="Условия" data-en="Terms">Условия</span>
+    </div>
+    <div class="faq">
+      <details open>
+        <summary data-ru="Сколько ждать пальто?" data-en="How long does a coat take?">Сколько ждать пальто?</summary>
+        <p data-ru="21 день с момента снятия мерок: 10 дней до первой примерки, неделя до контрольной, ещё 4 дня на финальную сборку и отделку." data-en="21 days from the measuring session: 10 days to the first fitting, a week to the control fitting, 4 more days for assembly and finishing.">21 день с момента снятия мерок: 10 дней до первой примерки, неделя до контрольной, ещё 4 дня на финальную сборку и отделку.</p>
+      </details>
+      <details>
+        <summary data-ru="Нужна ли предоплата?" data-en="Do you take a deposit?">Нужна ли предоплата?</summary>
+        <p data-ru="Первая встреча и снятие мерок — бесплатно. Предоплата 50% берётся после выбора ткани, остальное — при выдаче." data-en="The first visit and measurements are free. A 50% deposit is taken once the fabric is chosen, the balance on handover.">Первая встреча и снятие мерок — бесплатно. Предоплата 50% берётся после выбора ткани, остальное — при выдаче.</p>
+      </details>
+      <details>
+        <summary data-ru="А если сяду не так или изменится вес?" data-en="What if the fit changes?">А если сяду не так или изменится вес?</summary>
+        <p data-ru="Подгонка по фигуре входит в цену навсегда: приносите пальто и мы перекраиваем посадку. Ремонт пуговиц, подкладки и швов тоже бесплатный." data-en="Re-fitting is included for life: bring the coat in and we re-cut the fit. Buttons, lining and seam repairs are free too.">Подгонка по фигуре входит в цену навсегда: приносите пальто и мы перекраиваем посадку. Ремонт пуговиц, подкладки и швов тоже бесплатный.</p>
+      </details>
+      <details>
+        <summary data-ru="Доставка и возврат" data-en="Delivery and returns">Доставка и возврат</summary>
+        <p data-ru="Готовые аксессуары отправляем по России за 2—4 дня, по миру — за 7 дней. Возврат аксессуаров — 30 дней. Изделия по меркам возврату не подлежат, но подгоняются бесплатно до идеальной посадки." data-en="Ready accessories ship within Russia in 2—4 days and worldwide in 7. Accessories can be returned within 30 days. Made-to-measure pieces aren't returnable, but we adjust them free until the fit is right.">Готовые аксессуары отправляем по России за 2—4 дня, по миру — за 7 дней. Возврат аксессуаров — 30 дней. Изделия по меркам возврату не подлежат, но подгоняются бесплатно до идеальной посадки.</p>
+      </details>
+      <details>
+        <summary data-ru="Как ухаживать за шерстью?" data-en="How do I care for the wool?">Как ухаживать за шерстью?</summary>
+        <p data-ru="Только сухая чистка. После носки пройтись щёткой, раз в сезон проветрить. Хранить на широких плечиках, не в чехле из полиэтилена." data-en="Dry clean only. Brush after wear, air it once a season. Store on wide hangers, never in a plastic cover.">Только сухая чистка. После носки пройтись щёткой, раз в сезон проветрить. Хранить на широких плечиках, не в чехле из полиэтилена.</p>
+      </details>
+    </div>
+  </div>
+</section>
+
+<section class="section wrap" id="request">
+  <div class="section-head">
+    <div>
+      <p class="mono" data-ru="Заявка" data-en="Request">Заявка</p>
+      <h2 data-ru="Запишитесь на примерку" data-en="Book a fitting">Запишитесь на примерку</h2>
+      <p data-ru="Первая встреча бесплатна и ни к чему не обязывает: снимем мерки, покажем ткани, назовём точную цену и срок." data-en="The first visit is free and commits you to nothing: measurements, fabrics, an exact price and date.">Первая встреча бесплатна и ни к чему не обязывает: снимем мерки, покажем ткани, назовём точную цену и срок.</p>
+    </div>
+    <span class="idx" data-ru="Ответим в тот же день" data-en="Same-day reply">Ответим в тот же день</span>
+  </div>
+  <div class="contact">
+    <form id="requestForm" novalidate>
+      <div class="field">
+        <label for="name" data-ru="Имя" data-en="Name">Имя</label>
+        <input type="text" id="name" name="name" autocomplete="name" required data-ph-ru="Как к вам обращаться" data-ph-en="How should we address you" placeholder="Как к вам обращаться">
+      </div>
+      <div class="field">
+        <label for="contact" data-ru="Почта или телефон" data-en="Email or phone">Почта или телефон</label>
+        <input type="text" id="contact" name="contact" autocomplete="email" required data-ph-ru="you@example.com" data-ph-en="you@example.com" placeholder="you@example.com">
+      </div>
+      <div class="field">
+        <label for="item" data-ru="Что интересует" data-en="What are you after">Что интересует</label>
+        <input type="text" id="item" name="item" data-ph-ru="Пальто из шерсти" data-ph-en="Wool coat" placeholder="Пальто из шерсти">
+      </div>
+      <div class="field">
+        <label for="note" data-ru="Комментарий" data-en="Message">Комментарий</label>
+        <textarea id="note" name="note" data-ph-ru="Сроки, цвет, вопросы — что угодно" data-ph-en="Timing, colour, questions — anything" placeholder="Сроки, цвет, вопросы — что угодно"></textarea>
+      </div>
+      <button class="btn btn-solid" type="submit" data-ru="Отправить заявку" data-en="Send request">Отправить заявку</button>
+      <p class="form-status" id="formStatus" role="status" aria-live="polite"></p>
+      <p class="form-note" data-ru="Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Мы не передаём их третьим лицам." data-en="By sending the form you agree to the processing of your personal data. We never share it.">Нажимая кнопку, вы соглашаетесь на обработку персональных данных. Мы не передаём их третьим лицам.</p>
+    </form>
+    <div>
+      <div class="contact-list">
+        <div class="row"><span class="mono" data-ru="Ателье" data-en="Atelier">Ателье</span><b data-ru="Москва, по записи" data-en="Moscow, by appointment">Москва, по записи</b></div>
+        <div class="row"><span class="mono" data-ru="Почта" data-en="Email">Почта</span><b><a href="mailto:hello@paffo.ru">hello@paffo.ru</a></b></div>
+        <div class="row"><span class="mono" data-ru="Часы" data-en="Hours">Часы</span><b data-ru="Вторник — суббота, 10:00—18:00" data-en="Tuesday — Saturday, 10:00—18:00">Вторник — суббота, 10:00—18:00</b></div>
+        <div class="row"><span class="mono" data-ru="Ответ" data-en="Reply">Ответ</span><b data-ru="В течение рабочего дня" data-en="Within the working day">В течение рабочего дня</b></div>
+      </div>
+      <div class="ledger" style="margin-top:var(--s-4)">
+        <div class="row"><span class="mono" data-ru="Ткань" data-en="Fabric">Ткань</span><b data-ru="Итальянская шерсть 380 г — один рулон на пальто" data-en="Italian wool 380g — one bolt per coat">Итальянская шерсть 380 г — один рулон на пальто</b></div>
+        <div class="row"><span class="mono" data-ru="Посадка" data-en="Fit">Посадка</span><b data-ru="Две примерки, плечи смётываются вручную" data-en="Two fittings, shoulders basted by hand">Две примерки, плечи смётываются вручную</b></div>
+        <div class="row"><span class="mono" data-ru="Гарантия" data-en="Guarantee">Гарантия</span><b data-ru="Бесплатный ремонт и подгонка навсегда" data-en="Free repairs and re-fitting, forever">Бесплатный ремонт и подгонка навсегда</b></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
 
 <footer>
-  <div class="foot">
-    <p>PAFFO © 2026 — Atelier, not a store.</p>
-    <p><a href="/sitemap.xml">Sitemap</a> · <a href="mailto:hello@paffo.ru">hello@paffo.ru</a></p>
-    <p>Look №01 — Winter Elegance</p>
+  <div class="wrap foot">
+    <p>PAFFO © 2026 — <span data-ru="ателье, а не магазин" data-en="an atelier, not a store">ателье, а не магазин</span></p>
+    <p><a href="mailto:hello@paffo.ru">hello@paffo.ru</a> · <a href="/sitemap.xml">Sitemap</a></p>
+    <p><a href="#top" data-ru="Наверх ↑" data-en="Back to top ↑">Наверх ↑</a></p>
   </div>
 </footer>
 
-<script>
-const themeBtn = document.getElementById('themeBtn');
-const applyTheme = (t) => {
-  document.documentElement.dataset.theme = t;
-  themeBtn.textContent = t === 'dark' ? '☾' : '☀';
-  try { localStorage.setItem('paffo-theme', t); } catch (e) {}
-};
-themeBtn.addEventListener('click', () => applyTheme(document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark'));
-try { const saved = localStorage.getItem('paffo-theme'); if (saved) applyTheme(saved); } catch (e) {}
+<div class="sticky-cta" id="stickyCta">
+  <a class="btn btn-ghost" href="mailto:hello@paffo.ru" data-ru="Написать" data-en="Email us">Написать</a>
+  <a class="btn btn-solid" href="#request" data-ru="Записаться" data-en="Book a fitting">Записаться</a>
+</div>
 
-document.getElementById('burger').addEventListener('click', () => {
-  const p = document.getElementById('mobilePanel');
-  const open = p.classList.toggle('open');
-  document.getElementById('burger').setAttribute('aria-expanded', String(open));
-});
-document.getElementById('mobilePanel').querySelectorAll('a').forEach(a =>
-  a.addEventListener('click', () => document.getElementById('mobilePanel').classList.remove('open')));
-document.getElementById('signupForm').addEventListener('submit', e => e.preventDefault());
+<script>
+(() => {
+  const root = document.documentElement;
+  const store = {
+    get(k, d) { try { return localStorage.getItem(k) || d; } catch (e) { return d; } },
+    set(k, v) { try { localStorage.setItem(k, v); } catch (e) {} }
+  };
+
+  /* theme */
+  const themeBtn = document.getElementById('themeBtn');
+  const applyTheme = t => {
+    root.dataset.theme = t;
+    themeBtn.textContent = t === 'dark' ? '☾' : '☀';
+    store.set('paffo-theme', t);
+  };
+  const prefersLight = window.matchMedia('(prefers-color-scheme: light)').matches;
+  applyTheme(store.get('paffo-theme', prefersLight ? 'light' : 'dark'));
+  themeBtn.addEventListener('click', () => applyTheme(root.dataset.theme === 'dark' ? 'light' : 'dark'));
+
+  /* language */
+  const langBtn = document.getElementById('langBtn');
+  const applyLang = l => {
+    root.lang = l;
+    document.querySelectorAll('[data-ru]').forEach(el => { el.innerHTML = el.dataset[l]; });
+    document.querySelectorAll('[data-ph-ru]').forEach(el => { el.placeholder = el.dataset['ph' + l[0].toUpperCase() + l.slice(1)]; });
+    document.title = document.querySelector('title').dataset[l];
+    langBtn.textContent = l === 'ru' ? 'EN' : 'RU';
+    langBtn.setAttribute('aria-label', l === 'ru' ? 'Switch to English' : 'Переключить на русский');
+    store.set('paffo-lang', l);
+  };
+  const browserLang = (navigator.language || 'ru').toLowerCase().startsWith('ru') ? 'ru' : 'en';
+  applyLang(store.get('paffo-lang', browserLang));
+  langBtn.addEventListener('click', () => applyLang(root.lang === 'ru' ? 'en' : 'ru'));
+
+  /* mobile menu */
+  const panel = document.getElementById('mobilePanel');
+  const burger = document.getElementById('burger');
+  const setPanel = open => {
+    panel.classList.toggle('open', open);
+    burger.setAttribute('aria-expanded', String(open));
+    document.body.style.overflow = open ? 'hidden' : '';
+  };
+  burger.addEventListener('click', () => setPanel(true));
+  document.getElementById('closePanel').addEventListener('click', () => setPanel(false));
+  panel.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setPanel(false)));
+  document.addEventListener('keydown', e => { if (e.key === 'Escape') setPanel(false); });
+
+  /* nav background + sticky cta */
+  const nav = document.getElementById('nav');
+  const sticky = document.getElementById('stickyCta');
+  const onScroll = () => {
+    const y = window.scrollY;
+    nav.classList.toggle('stuck', y > 24);
+    sticky.classList.toggle('show', y > window.innerHeight * 0.8);
+  };
+  onScroll();
+  window.addEventListener('scroll', onScroll, { passive: true });
+
+  /* reveal on scroll */
+  const io = new IntersectionObserver(entries => {
+    entries.forEach(en => { if (en.isIntersecting) { en.target.classList.add('in'); io.unobserve(en.target); } });
+  }, { rootMargin: '0px 0px -8% 0px', threshold: 0.08 });
+  document.querySelectorAll('.rv').forEach(el => io.observe(el));
+
+  /* prefill product in the request form */
+  document.querySelectorAll('[data-item]').forEach(card => card.addEventListener('click', () => {
+    const field = document.getElementById('item');
+    const title = card.querySelector('h3');
+    if (field && title) field.value = title.textContent.trim();
+  }));
+
+  /* request form — opens a prefilled letter until a backend is wired up */
+  const form = document.getElementById('requestForm');
+  const status = document.getElementById('formStatus');
+  const texts = {
+    ru: { invalid: 'Заполните имя и контакт', sent: 'Открыли письмо — отправьте его, и мы ответим сегодня' },
+    en: { invalid: 'Please fill in your name and contact', sent: 'A letter is ready — send it and we reply today' }
+  };
+  form.addEventListener('submit', e => {
+    e.preventDefault();
+    const l = root.lang === 'en' ? 'en' : 'ru';
+    const data = Object.fromEntries(new FormData(form).entries());
+    if (!data.name.trim() || !data.contact.trim()) { status.textContent = texts[l].invalid; return; }
+    const body = [
+      `${l === 'ru' ? 'Имя' : 'Name'}: ${data.name}`,
+      `${l === 'ru' ? 'Контакт' : 'Contact'}: ${data.contact}`,
+      `${l === 'ru' ? 'Интересует' : 'Interested in'}: ${data.item || '—'}`,
+      `${l === 'ru' ? 'Комментарий' : 'Message'}: ${data.note || '—'}`
+    ].join('\n');
+    window.location.href = `mailto:hello@paffo.ru?subject=${encodeURIComponent(l === 'ru' ? 'Заявка на примерку — PAFFO' : 'Fitting request — PAFFO')}&body=${encodeURIComponent(body)}`;
+    status.textContent = texts[l].sent;
+    form.reset();
+  });
+})();
 </script>
 </body>
 </html>
