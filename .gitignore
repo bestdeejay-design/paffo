@@ -67,3 +67,9 @@ htmlcov/
 *.tar.bz2
 *.tar.xz
 *.tar.zst
+# Local working artifacts (not for repo)
+.omo/
+.playwright-mcp/
+new-img/
+img/_old/
+paffo-*.png
